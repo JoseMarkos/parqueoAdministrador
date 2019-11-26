@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\prograIBProyectoLibrary\proyectoLibrary\proyectoLibrary.csproj">
+      <Project>{7148f674-15d4-432f-a7b8-6599d1a096c7}</Project>
+      <Name>proyectoLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
