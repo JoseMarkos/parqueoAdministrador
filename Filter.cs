@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
-    class Filter
+    public sealed class Filter
     {
         public List<Vehicle> ByVehicleType(Vehicle.Vehicletype type)
         {

@@ -28,18 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelData = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.splitMain = new System.Windows.Forms.SplitContainer();
             this.panelFilters = new System.Windows.Forms.Panel();
+            this.panelCreateParking = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panelParkingFields = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.radio1 = new System.Windows.Forms.RadioButton();
+            this.radio3 = new System.Windows.Forms.RadioButton();
+            this.radio2 = new System.Windows.Forms.RadioButton();
+            this.radio4 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
+            this.splitMain.Panel2.SuspendLayout();
+            this.splitMain.SuspendLayout();
+            this.panelCreateParking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panelParkingFields.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -50,23 +63,23 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -75,14 +88,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(610, 410);
             this.dataGridView1.TabIndex = 0;
@@ -96,19 +109,19 @@
             this.panelData.Size = new System.Drawing.Size(610, 410);
             this.panelData.TabIndex = 1;
             // 
-            // splitContainer1
+            // splitMain
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitMain.Location = new System.Drawing.Point(0, 0);
+            this.splitMain.Name = "splitMain";
             // 
-            // splitContainer1.Panel2
+            // splitMain.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panelFilters);
-            this.splitContainer1.Panel2.Controls.Add(this.panelData);
-            this.splitContainer1.Size = new System.Drawing.Size(921, 517);
-            this.splitContainer1.SplitterDistance = 307;
-            this.splitContainer1.TabIndex = 2;
+            this.splitMain.Panel2.Controls.Add(this.panelFilters);
+            this.splitMain.Panel2.Controls.Add(this.panelData);
+            this.splitMain.Size = new System.Drawing.Size(921, 517);
+            this.splitMain.SplitterDistance = 307;
+            this.splitMain.TabIndex = 2;
             // 
             // panelFilters
             // 
@@ -118,21 +131,114 @@
             this.panelFilters.Size = new System.Drawing.Size(610, 100);
             this.panelFilters.TabIndex = 2;
             // 
+            // panelCreateParking
+            // 
+            this.panelCreateParking.Controls.Add(this.splitContainer1);
+            this.panelCreateParking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCreateParking.Location = new System.Drawing.Point(0, 0);
+            this.panelCreateParking.Name = "panelCreateParking";
+            this.panelCreateParking.Size = new System.Drawing.Size(921, 517);
+            this.panelCreateParking.TabIndex = 0;
+            this.panelCreateParking.Visible = false;
+            this.panelCreateParking.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateParking_Paint);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.panelParkingFields);
+            this.splitContainer1.Size = new System.Drawing.Size(921, 517);
+            this.splitContainer1.SplitterDistance = 434;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // panelParkingFields
+            // 
+            this.panelParkingFields.Controls.Add(this.radio4);
+            this.panelParkingFields.Controls.Add(this.radio2);
+            this.panelParkingFields.Controls.Add(this.radio3);
+            this.panelParkingFields.Controls.Add(this.radio1);
+            this.panelParkingFields.Controls.Add(this.txtName);
+            this.panelParkingFields.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelParkingFields.Location = new System.Drawing.Point(0, 0);
+            this.panelParkingFields.Name = "panelParkingFields";
+            this.panelParkingFields.Size = new System.Drawing.Size(921, 434);
+            this.panelParkingFields.TabIndex = 0;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(301, 54);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(319, 20);
+            this.txtName.TabIndex = 0;
+            this.txtName.Tag = "Name";
+            // 
+            // radio1
+            // 
+            this.radio1.AutoSize = true;
+            this.radio1.Location = new System.Drawing.Point(303, 110);
+            this.radio1.Name = "radio1";
+            this.radio1.Size = new System.Drawing.Size(14, 13);
+            this.radio1.TabIndex = 1;
+            this.radio1.TabStop = true;
+            this.radio1.UseVisualStyleBackColor = true;
+            // 
+            // radio3
+            // 
+            this.radio3.AutoSize = true;
+            this.radio3.Location = new System.Drawing.Point(303, 152);
+            this.radio3.Name = "radio3";
+            this.radio3.Size = new System.Drawing.Size(14, 13);
+            this.radio3.TabIndex = 2;
+            this.radio3.TabStop = true;
+            this.radio3.UseVisualStyleBackColor = true;
+            // 
+            // radio2
+            // 
+            this.radio2.AutoSize = true;
+            this.radio2.Location = new System.Drawing.Point(467, 110);
+            this.radio2.Name = "radio2";
+            this.radio2.Size = new System.Drawing.Size(14, 13);
+            this.radio2.TabIndex = 3;
+            this.radio2.TabStop = true;
+            this.radio2.UseVisualStyleBackColor = true;
+            // 
+            // radio4
+            // 
+            this.radio4.AutoSize = true;
+            this.radio4.Location = new System.Drawing.Point(467, 152);
+            this.radio4.Name = "radio4";
+            this.radio4.Size = new System.Drawing.Size(14, 13);
+            this.radio4.TabIndex = 4;
+            this.radio4.TabStop = true;
+            this.radio4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 517);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.splitMain);
+            this.Controls.Add(this.panelCreateParking);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelData.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
+            this.splitMain.ResumeLayout(false);
+            this.panelCreateParking.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panelParkingFields.ResumeLayout(false);
+            this.panelParkingFields.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -143,8 +249,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vehiculosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panelData;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitMain;
         private System.Windows.Forms.Panel panelFilters;
+        private System.Windows.Forms.Panel panelCreateParking;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel panelParkingFields;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.RadioButton radio4;
+        private System.Windows.Forms.RadioButton radio2;
+        private System.Windows.Forms.RadioButton radio3;
+        private System.Windows.Forms.RadioButton radio1;
     }
 }
 

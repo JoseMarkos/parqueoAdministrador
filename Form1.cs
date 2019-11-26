@@ -27,13 +27,14 @@ namespace ParqueoAdministrator
             CuentaParqueo cuentaParqueo2 = new CuentaParqueo();
             CuentaParqueo cuentaParqueo3 = new CuentaParqueo();
 
-            Vehicle vehicle = new Vehicle(Vehicle.Vehicletype.Coupe, "Pss", "Marcos", cuentaParqueo.ID, "Holis");
-            Vehicle vehicle2 = new Vehicle(Vehicle.Vehicletype.Coupe, "Pswwwws", "Jose Culajay", cuentaParqueo2.ID, "ww");
-            Vehicle vehicle3 = new Vehicle(Vehicle.Vehicletype.Camioneta, "Pss", "Jose Marcos", cuentaParqueo3.ID, "aa");
+            Vehicle vehicle = new Vehicle
+                ("Marcos"
+                , cuentaParqueo.ID
+                , Vehicle.Vehicletype.Coupe
+                , "Pss"
+                , "Holis");
 
             listaVehiculos.Add(vehicle);
-            listaVehiculos.Add(vehicle2);
-            listaVehiculos.Add(vehicle3);
 
             cuentaParqueo.GuardarInformacionPersonal("Marcos");
             cuentaParqueo2.GuardarInformacionPersonal("Jorge");
@@ -58,6 +59,18 @@ namespace ParqueoAdministrator
 
             dataGridView1.DataSource = filter.ByVehicleType(Vehicle.Vehicletype.Camioneta);
             dataGridView1.Refresh();
+
+
+            radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
+            radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
+            radio3.Text = Parking.ParkingQuadrant.SouthEast.ToString();
+            radio4.Text = Parking.ParkingQuadrant.SouthWest.ToString();
+
+        }
+
+        private void panelCreateParking_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
