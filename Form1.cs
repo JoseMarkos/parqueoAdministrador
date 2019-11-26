@@ -35,9 +35,9 @@ namespace ParqueoAdministrator
             listaVehiculos.Add(vehicle2);
             listaVehiculos.Add(vehicle3);
 
-            cuentaParqueo.GuardarInformacionPersonal("Marcos", 24);
-            cuentaParqueo2.GuardarInformacionPersonal("Jorge", 26);
-            cuentaParqueo3.GuardarInformacionPersonal("Denisse", 23);
+            cuentaParqueo.GuardarInformacionPersonal("Marcos");
+            cuentaParqueo2.GuardarInformacionPersonal("Jorge");
+            cuentaParqueo3.GuardarInformacionPersonal("Denisse");
 
             cuentaParqueo.GuardarListaDeCarros(listaVehiculos);
 
