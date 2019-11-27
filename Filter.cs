@@ -87,8 +87,14 @@ namespace ParqueoAdministrator
 
             foreach (var item in Form1.listaVehiculos)
             {
-
                 licensePlatePrefixLevel prefixLevel = GetLicensePlatePrefixLevel(licensePlatePrefix);
+
+                #region For two and three cases
+
+                string licensePlatePrefixString = licensePlatePrefix.ToString();
+
+                #endregion
+
 
                 switch (prefixLevel)
                 {
@@ -106,12 +112,26 @@ namespace ParqueoAdministrator
                         break;
                     case licensePlatePrefixLevel.two:
                         
-                        string licensePlatePrefixString = licensePlatePrefix.ToString();
+                        string licenPlaceFirstTwoChars = item.LicensePlate[1].ToString() + item.LicensePlate[2].ToString();
 
-                        
+                        if (licensePlatePrefixString == licenPlaceFirstTwoChars)
+                        {
+                            list.Add(item);
+                        }
+
                         break;
                     case licensePlatePrefixLevel.tree:
-                        
+
+                        string licenPlaceFirstThreeChars 
+                            = item.LicensePlate[1].ToString() 
+                            + item.LicensePlate[2].ToString()
+                            + item.LicensePlate[3].ToString();
+
+                        if (licensePlatePrefixString == licenPlaceFirstThreeChars)
+                        {
+                            list.Add(item);
+                        }
+
                         break;
                 }
             }
