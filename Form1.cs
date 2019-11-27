@@ -17,6 +17,7 @@ namespace ParqueoAdministrator
     {
         public static List<CuentaParqueo> listaCuentaParqueo = new List<CuentaParqueo>();
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
+        private Filter filter = new Filter();
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +41,8 @@ namespace ParqueoAdministrator
             dataGridView1.Refresh();
 
 
+            
+
             //radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
             //radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
             //radio3.Text = Parking.ParkingQuadrant.SouthEast.ToString();
@@ -49,6 +52,12 @@ namespace ParqueoAdministrator
         private void panelCreateParking_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtFilterOwner_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = filter.ByOwner(txtFilterOwner.Text);
+            dataGridView1.Refresh();
         }
     }
 }

@@ -43,11 +43,13 @@
             this.radio3 = new System.Windows.Forms.RadioButton();
             this.radio2 = new System.Windows.Forms.RadioButton();
             this.radio4 = new System.Windows.Forms.RadioButton();
+            this.txtFilterOwner = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel2.SuspendLayout();
             this.splitMain.SuspendLayout();
+            this.panelFilters.SuspendLayout();
             this.panelCreateParking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -125,6 +127,8 @@
             // 
             // panelFilters
             // 
+            this.panelFilters.BackColor = System.Drawing.Color.White;
+            this.panelFilters.Controls.Add(this.txtFilterOwner);
             this.panelFilters.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFilters.Location = new System.Drawing.Point(0, 0);
             this.panelFilters.Name = "panelFilters";
@@ -217,6 +221,14 @@
             this.radio4.TabStop = true;
             this.radio4.UseVisualStyleBackColor = true;
             // 
+            // txtFilterOwner
+            // 
+            this.txtFilterOwner.Location = new System.Drawing.Point(3, 66);
+            this.txtFilterOwner.Name = "txtFilterOwner";
+            this.txtFilterOwner.Size = new System.Drawing.Size(152, 20);
+            this.txtFilterOwner.TabIndex = 0;
+            this.txtFilterOwner.TextChanged += new System.EventHandler(this.txtFilterOwner_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +245,8 @@
             this.splitMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
             this.splitMain.ResumeLayout(false);
+            this.panelFilters.ResumeLayout(false);
+            this.panelFilters.PerformLayout();
             this.panelCreateParking.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -259,6 +273,7 @@
         private System.Windows.Forms.RadioButton radio2;
         private System.Windows.Forms.RadioButton radio3;
         private System.Windows.Forms.RadioButton radio1;
+        private System.Windows.Forms.TextBox txtFilterOwner;
     }
 }
 
