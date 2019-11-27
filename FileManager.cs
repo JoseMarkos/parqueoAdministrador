@@ -28,5 +28,15 @@ namespace ParqueoAdministrator
 
             _ = File.Create(ParkingPath + "//" + name);
         }
+
+        public void DeleteParkingFile(string name)
+        {
+            // create just once
+            if (_ = File.Exists(ParkingPath + "//" + name))
+            {
+                File.Delete(ParkingPath + "//" + name);
+            }
+
+        }
     }
 }
