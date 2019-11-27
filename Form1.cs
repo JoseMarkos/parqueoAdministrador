@@ -45,6 +45,24 @@ namespace ParqueoAdministrator
             comboVehicleType.Items.Add(Vehicle.Vehicletype.PickUp);
             comboVehicleType.Items.Add(Vehicle.Vehicletype.Camioneta);
 
+            // Adding options to comboTypeLicensePlate filter
+
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.A);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.C);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CC);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CD);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.DIS);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.E);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.EXT);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.M);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.MI);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.O);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.P);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TC);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
+            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
+
+
             //radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
             //radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
             //radio3.Text = Parking.ParkingQuadrant.SouthEast.ToString();
@@ -67,6 +85,7 @@ namespace ParqueoAdministrator
         {
             txtFilterOwner.Text = string.Empty;
             comboVehicleType.Text = "Type";
+            comboTypeLicensePlate.Text = "License Plate Type";
             initDataGridViewSource();
         }
 
@@ -78,6 +97,13 @@ namespace ParqueoAdministrator
             };
 
             dataGridView1.DataSource = bindingSource;
+            dataGridView1.Refresh();
+        }
+
+        private void comboTypeLicensePlate_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            dataGridView1.DataSource = filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem);
             dataGridView1.Refresh();
         }
     }

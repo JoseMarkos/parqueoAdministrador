@@ -17,17 +17,15 @@ namespace ParqueoAdministrator
         {
             string line;
             StreamReader streamReader = new StreamReader(Path);
-            StringBuilder stringBuilder = new StringBuilder();
+
             string _owner;
             int OwnderIDInt = -10;
             byte _ownerID = 0;
             Vehicle.Vehicletype _type;
-            string _licensePlate;
-            string _parking;
+            string _licensePlate, _parking;
 
             while ((line = streamReader.ReadLine()) != null)
             {
-                stringBuilder.AppendLine(line);
 
                 string[] lineArray = line.ToString().Split(',');
 
@@ -48,7 +46,6 @@ namespace ParqueoAdministrator
                 list.Add(vehicle);
             }
 
-            stringBuilder.Clear();
             streamReader.Close();
 
             return list;

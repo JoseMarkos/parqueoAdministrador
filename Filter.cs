@@ -11,6 +11,34 @@ namespace ParqueoAdministrator
 {
     public sealed class Filter
     {
+        #region Enums
+
+        public enum licensePlatePrefix
+        {
+            A,
+            C,
+            CC,
+            CD,
+            DIS,
+            E,
+            EXT,
+            M,
+            MI,
+            O,
+            P,
+            TC,
+            TRC,
+            U
+        }
+
+        public enum licensePlatePrefixLevel
+        {
+            one = 1,
+            two = 2,
+            tree = 3
+        }
+
+        #endregion
         public List<Vehicle> ByVehicleType(Vehicle.Vehicletype type)
         {
             List<Vehicle> list = new List<Vehicle>();
@@ -36,14 +64,8 @@ namespace ParqueoAdministrator
             {
                 string[] ownerArray = item.Owner.ToLower().Split();
 
-                //MessageBox.Show(ownerArray[0] + ownerArray[1]);
-
                 for (int i = 0; i < ownerArray.Length; i++)
                 {
-                    //MessageBox.Show(name);
-                    //MessageBox.Show(ownerArray[i]);
-
-
                     if (name == ownerArray[i])
                     {
                         list.Add(item);
@@ -57,6 +79,72 @@ namespace ParqueoAdministrator
             }
 
             return Form1.listaVehiculos;
+        }
+
+        public List<Vehicle> ByLisencePlate(licensePlatePrefix licensePlatePrefix)
+        {
+            List<Vehicle> list = new List<Vehicle>();
+
+            foreach (var item in Form1.listaVehiculos)
+            {
+
+                licensePlatePrefixLevel prefixLevel = GetLicensePlatePrefixLevel(licensePlatePrefix);
+
+                switch (prefixLevel)
+                {
+                    case licensePlatePrefixLevel.one:
+                        
+                        char licensePlatePrefixChar = Convert.ToChar(licensePlatePrefix.ToString());
+
+                        // index 1 because of white space in the file:
+                        // propN, propN+1
+                        if (licensePlatePrefixChar == item.LicensePlate[1])
+                        {
+                            list.Add(item);
+                        }
+
+                        break;
+                    case licensePlatePrefixLevel.two:
+                        
+                        string licensePlatePrefixString = licensePlatePrefix.ToString();
+
+                        
+                        break;
+                    case licensePlatePrefixLevel.tree:
+                        
+                        break;
+                }
+            }
+
+            if (list.Count > 0)
+            {
+                return list;
+            }
+
+            return Form1.listaVehiculos;
+        }
+
+        public licensePlatePrefixLevel GetLicensePlatePrefixLevel(licensePlatePrefix licensePlatePrefix)
+        {
+            switch (licensePlatePrefix)
+            {
+                case licensePlatePrefix.CC:
+                    return licensePlatePrefixLevel.two;
+                case licensePlatePrefix.CD:
+                    return licensePlatePrefixLevel.two;
+                case licensePlatePrefix.DIS:
+                    return licensePlatePrefixLevel.tree;
+                case licensePlatePrefix.EXT:
+                    return licensePlatePrefixLevel.tree;
+                case licensePlatePrefix.MI:
+                    return licensePlatePrefixLevel.two;
+                case licensePlatePrefix.TC:
+                    return licensePlatePrefixLevel.two;
+                case licensePlatePrefix.TRC:
+                    return licensePlatePrefixLevel.tree;
+                default:
+                    return licensePlatePrefixLevel.one;
+            }
         }
     }
 }
