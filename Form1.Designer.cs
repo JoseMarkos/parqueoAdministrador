@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelData = new System.Windows.Forms.Panel();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.panelFilters = new System.Windows.Forms.Panel();
+            this.comboVehicleType = new System.Windows.Forms.ComboBox();
+            this.txtFilterOwner = new System.Windows.Forms.TextBox();
             this.panelCreateParking = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelParkingFields = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.radio1 = new System.Windows.Forms.RadioButton();
-            this.radio3 = new System.Windows.Forms.RadioButton();
-            this.radio2 = new System.Windows.Forms.RadioButton();
             this.radio4 = new System.Windows.Forms.RadioButton();
-            this.txtFilterOwner = new System.Windows.Forms.TextBox();
+            this.radio2 = new System.Windows.Forms.RadioButton();
+            this.radio3 = new System.Windows.Forms.RadioButton();
+            this.radio1 = new System.Windows.Forms.RadioButton();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnClearFilters = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -65,23 +67,23 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -90,14 +92,14 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(610, 410);
             this.dataGridView1.TabIndex = 0;
@@ -117,6 +119,11 @@
             this.splitMain.Location = new System.Drawing.Point(0, 0);
             this.splitMain.Name = "splitMain";
             // 
+            // splitMain.Panel1
+            // 
+            this.splitMain.Panel1.BackColor = System.Drawing.Color.Indigo;
+            this.splitMain.Panel1.ForeColor = System.Drawing.Color.White;
+            // 
             // splitMain.Panel2
             // 
             this.splitMain.Panel2.Controls.Add(this.panelFilters);
@@ -128,12 +135,33 @@
             // panelFilters
             // 
             this.panelFilters.BackColor = System.Drawing.Color.White;
+            this.panelFilters.Controls.Add(this.btnClearFilters);
+            this.panelFilters.Controls.Add(this.comboVehicleType);
             this.panelFilters.Controls.Add(this.txtFilterOwner);
-            this.panelFilters.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFilters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFilters.Location = new System.Drawing.Point(0, 0);
             this.panelFilters.Name = "panelFilters";
-            this.panelFilters.Size = new System.Drawing.Size(610, 100);
+            this.panelFilters.Size = new System.Drawing.Size(610, 107);
             this.panelFilters.TabIndex = 2;
+            // 
+            // comboVehicleType
+            // 
+            this.comboVehicleType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboVehicleType.FormattingEnabled = true;
+            this.comboVehicleType.Location = new System.Drawing.Point(179, 66);
+            this.comboVehicleType.Name = "comboVehicleType";
+            this.comboVehicleType.Size = new System.Drawing.Size(121, 21);
+            this.comboVehicleType.TabIndex = 1;
+            this.comboVehicleType.Text = "Type";
+            this.comboVehicleType.SelectedValueChanged += new System.EventHandler(this.comboVehicleType_SelectedValueChanged);
+            // 
+            // txtFilterOwner
+            // 
+            this.txtFilterOwner.Location = new System.Drawing.Point(3, 66);
+            this.txtFilterOwner.Name = "txtFilterOwner";
+            this.txtFilterOwner.Size = new System.Drawing.Size(152, 20);
+            this.txtFilterOwner.TabIndex = 0;
+            this.txtFilterOwner.TextChanged += new System.EventHandler(this.txtFilterOwner_TextChanged);
             // 
             // panelCreateParking
             // 
@@ -144,7 +172,6 @@
             this.panelCreateParking.Size = new System.Drawing.Size(921, 517);
             this.panelCreateParking.TabIndex = 0;
             this.panelCreateParking.Visible = false;
-            this.panelCreateParking.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateParking_Paint);
             // 
             // splitContainer1
             // 
@@ -173,33 +200,15 @@
             this.panelParkingFields.Size = new System.Drawing.Size(921, 434);
             this.panelParkingFields.TabIndex = 0;
             // 
-            // txtName
+            // radio4
             // 
-            this.txtName.Location = new System.Drawing.Point(301, 54);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(319, 20);
-            this.txtName.TabIndex = 0;
-            this.txtName.Tag = "Name";
-            // 
-            // radio1
-            // 
-            this.radio1.AutoSize = true;
-            this.radio1.Location = new System.Drawing.Point(303, 110);
-            this.radio1.Name = "radio1";
-            this.radio1.Size = new System.Drawing.Size(14, 13);
-            this.radio1.TabIndex = 1;
-            this.radio1.TabStop = true;
-            this.radio1.UseVisualStyleBackColor = true;
-            // 
-            // radio3
-            // 
-            this.radio3.AutoSize = true;
-            this.radio3.Location = new System.Drawing.Point(303, 152);
-            this.radio3.Name = "radio3";
-            this.radio3.Size = new System.Drawing.Size(14, 13);
-            this.radio3.TabIndex = 2;
-            this.radio3.TabStop = true;
-            this.radio3.UseVisualStyleBackColor = true;
+            this.radio4.AutoSize = true;
+            this.radio4.Location = new System.Drawing.Point(467, 152);
+            this.radio4.Name = "radio4";
+            this.radio4.Size = new System.Drawing.Size(14, 13);
+            this.radio4.TabIndex = 4;
+            this.radio4.TabStop = true;
+            this.radio4.UseVisualStyleBackColor = true;
             // 
             // radio2
             // 
@@ -211,23 +220,43 @@
             this.radio2.TabStop = true;
             this.radio2.UseVisualStyleBackColor = true;
             // 
-            // radio4
+            // radio3
             // 
-            this.radio4.AutoSize = true;
-            this.radio4.Location = new System.Drawing.Point(467, 152);
-            this.radio4.Name = "radio4";
-            this.radio4.Size = new System.Drawing.Size(14, 13);
-            this.radio4.TabIndex = 4;
-            this.radio4.TabStop = true;
-            this.radio4.UseVisualStyleBackColor = true;
+            this.radio3.AutoSize = true;
+            this.radio3.Location = new System.Drawing.Point(303, 152);
+            this.radio3.Name = "radio3";
+            this.radio3.Size = new System.Drawing.Size(14, 13);
+            this.radio3.TabIndex = 2;
+            this.radio3.TabStop = true;
+            this.radio3.UseVisualStyleBackColor = true;
             // 
-            // txtFilterOwner
+            // radio1
             // 
-            this.txtFilterOwner.Location = new System.Drawing.Point(3, 66);
-            this.txtFilterOwner.Name = "txtFilterOwner";
-            this.txtFilterOwner.Size = new System.Drawing.Size(152, 20);
-            this.txtFilterOwner.TabIndex = 0;
-            this.txtFilterOwner.TextChanged += new System.EventHandler(this.txtFilterOwner_TextChanged);
+            this.radio1.AutoSize = true;
+            this.radio1.Location = new System.Drawing.Point(303, 110);
+            this.radio1.Name = "radio1";
+            this.radio1.Size = new System.Drawing.Size(14, 13);
+            this.radio1.TabIndex = 1;
+            this.radio1.TabStop = true;
+            this.radio1.UseVisualStyleBackColor = true;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(301, 54);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(319, 20);
+            this.txtName.TabIndex = 0;
+            this.txtName.Tag = "Name";
+            // 
+            // btnClearFilters
+            // 
+            this.btnClearFilters.Location = new System.Drawing.Point(500, 64);
+            this.btnClearFilters.Name = "btnClearFilters";
+            this.btnClearFilters.Size = new System.Drawing.Size(98, 23);
+            this.btnClearFilters.TabIndex = 2;
+            this.btnClearFilters.Text = "Clear Filter";
+            this.btnClearFilters.UseVisualStyleBackColor = true;
+            this.btnClearFilters.Click += new System.EventHandler(this.btnClearFilters_Click);
             // 
             // Form1
             // 
@@ -274,6 +303,8 @@
         private System.Windows.Forms.RadioButton radio3;
         private System.Windows.Forms.RadioButton radio1;
         private System.Windows.Forms.TextBox txtFilterOwner;
+        private System.Windows.Forms.ComboBox comboVehicleType;
+        private System.Windows.Forms.Button btnClearFilters;
     }
 }
 

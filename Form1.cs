@@ -25,6 +25,8 @@ namespace ParqueoAdministrator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // open default file
+
             FileManager fileManager = new FileManager();
 
             FileRead fileRead = new FileRead();
@@ -32,16 +34,16 @@ namespace ParqueoAdministrator
 
             listaVehiculos = fileRead.ReadFile();
 
-            BindingSource bindingSource = new BindingSource
-            {
-                DataSource = listaVehiculos
-            };
+            initDataGridViewSource();
 
-            dataGridView1.DataSource = bindingSource;
-            dataGridView1.Refresh();
+            // Adding options to comboVehicleType filter
 
-
-            
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.Sedan);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.Coupe);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.HatchBack);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.SUV);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.PickUp);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.Camioneta);
 
             //radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
             //radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
@@ -49,14 +51,33 @@ namespace ParqueoAdministrator
             //radio4.Text = Parking.ParkingQuadrant.SouthWest.ToString();
         }
 
-        private void panelCreateParking_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void txtFilterOwner_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = filter.ByOwner(txtFilterOwner.Text);
+            dataGridView1.Refresh();
+        }
+
+        private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
+            dataGridView1.Refresh();
+        }
+
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            txtFilterOwner.Text = string.Empty;
+            comboVehicleType.Text = "Type";
+            initDataGridViewSource();
+        }
+
+        private void initDataGridViewSource()
+        {
+            BindingSource bindingSource = new BindingSource
+            {
+                DataSource = listaVehiculos
+            };
+
+            dataGridView1.DataSource = bindingSource;
             dataGridView1.Refresh();
         }
     }
