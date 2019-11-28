@@ -78,12 +78,17 @@ namespace ParqueoAdministrator
             return Administrator.listaVehiculos;
         }
 
-        public List<Vehicle> ByLisencePlate(licensePlatePrefix licensePlatePrefix)
+        public void ByLisencePlate(licensePlatePrefix licensePlatePrefix, DataGridView dgv)
         {
-            List<Vehicle> list = new List<Vehicle>();
+            DataGridViewRowCollection collection = dgv.Rows;
+            dgv.CurrentCell = null;
 
-            foreach (var item in Administrator.listaVehiculos)
+            int counter = 0;
+
+            for (int i = 0; i < Administrator.listaVehiculos.Count; i++)
             {
+                collection[i].Visible = true;
+
                 licensePlatePrefixLevel prefixLevel = GetLicensePlatePrefixLevel(licensePlatePrefix);
 
                 #region For two and three cases
@@ -91,7 +96,6 @@ namespace ParqueoAdministrator
                 string licensePlatePrefixString = licensePlatePrefix.ToString();
 
                 #endregion
-
 
                 switch (prefixLevel)
                 {
@@ -101,44 +105,42 @@ namespace ParqueoAdministrator
 
                         // index 1 because of white space in the file:
                         // propN, propN+1
-                        if (licensePlatePrefixChar == item.LicensePlate[1])
+                        if (licensePlatePrefixChar != Administrator.listaVehiculos[i].LicensePlate[1])
                         {
-                            list.Add(item);
+                            collection[i].Visible = false;
+                            counter++;
                         }
 
                         break;
                     case licensePlatePrefixLevel.two:
 
-                        string licenPlaceFirstTwoChars = item.LicensePlate[1].ToString() + item.LicensePlate[2].ToString();
+                        string licenPlaceFirstTwoChars 
+                            =  Administrator.listaVehiculos[i].LicensePlate[1].ToString() 
+                            +  Administrator.listaVehiculos[i].LicensePlate[2].ToString();
 
-                        if (licensePlatePrefixString == licenPlaceFirstTwoChars)
+                        if (licensePlatePrefixString != licenPlaceFirstTwoChars)
                         {
-                            list.Add(item);
+                            collection[i].Visible = false;
+                            counter++;
                         }
 
                         break;
                     case licensePlatePrefixLevel.tree:
 
                         string licenPlaceFirstThreeChars
-                            = item.LicensePlate[1].ToString()
-                            + item.LicensePlate[2].ToString()
-                            + item.LicensePlate[3].ToString();
+                            =  Administrator.listaVehiculos[i].LicensePlate[1].ToString()
+                            +  Administrator.listaVehiculos[i].LicensePlate[2].ToString()
+                            +  Administrator.listaVehiculos[i].LicensePlate[3].ToString();
 
-                        if (licensePlatePrefixString == licenPlaceFirstThreeChars)
+                        if (licensePlatePrefixString != licenPlaceFirstThreeChars)
                         {
-                            list.Add(item);
+                            collection[i].Visible = false;
+                            counter++;
                         }
 
                         break;
                 }
             }
-
-            if (list.Count > 0)
-            {
-                return list;
-            }
-
-            return Administrator.listaVehiculos;
         }
 
         public licensePlatePrefixLevel GetLicensePlatePrefixLevel(licensePlatePrefix licensePlatePrefix)

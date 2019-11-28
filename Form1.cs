@@ -55,31 +55,6 @@ namespace ParqueoAdministrator
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
         }
 
-        private void txtFilterOwner_TextChanged(object sender, EventArgs e)
-        {
-            dgvVehiculos.DataSource = filter.ByOwner(txtFilterOwner.Text);
-            dgvVehiculos.Refresh();
-        }
-
-        private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (comboVehicleType.SelectedItem != null)
-            {
-                filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
-            }
-        }
-
-        private void btnClearFilters_Click(object sender, EventArgs e)
-        {
-            txtFilterOwner.Text = string.Empty;
-            comboVehicleType.Text = "Type";
-            comboVehicleType.SelectedItem = null;
-            comboTypeLicensePlate.Text = "License Plate Type";
-            comboTypeLicensePlate.SelectedItem = null;
-
-            initDataGridViewSource();
-        }
-
         private void initDataGridViewSource()
         {
             BindingSource bindingSource = new BindingSource
@@ -89,7 +64,7 @@ namespace ParqueoAdministrator
 
             dgvVehiculos.DataSource = bindingSource;
             dgvVehiculos.Refresh();
-            dgvParqueos.CurrentCell = null;
+            dgvVehiculos.CurrentCell = null;
         }
 
         private void initDataGridViewSource(List<Parking> list)
@@ -102,13 +77,6 @@ namespace ParqueoAdministrator
             dgvParqueos.DataSource = bindingSource;
             dgvParqueos.Refresh();
             dgvParqueos.CurrentCell = null;
-        }
-
-        private void comboTypeLicensePlate_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-            dgvVehiculos.DataSource = filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem);
-            dgvVehiculos.Refresh();
         }
 
         private void SelectVehiclePanel()
@@ -160,6 +128,11 @@ namespace ParqueoAdministrator
             {
                 filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
             }
+
+            if (comboTypeLicensePlate.SelectedItem != null)
+            {
+                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+            }
         }
 
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -167,5 +140,42 @@ namespace ParqueoAdministrator
             rowId = e.RowIndex;
             labelVehiculos.Text = rowId.ToString();
         }
+
+        #region Filter
+        private void txtFilterOwner_TextChanged(object sender, EventArgs e)
+        {
+            dgvVehiculos.DataSource = filter.ByOwner(txtFilterOwner.Text);
+            dgvVehiculos.Refresh();
+        }
+
+        private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboVehicleType.SelectedItem != null)
+            {
+                filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
+            }
+        }
+
+        private void btnClearFilters_Click(object sender, EventArgs e)
+        {
+            txtFilterOwner.Text = string.Empty;
+            
+            comboVehicleType.SelectedItem = null;
+            comboVehicleType.Text = "Type";
+
+            comboTypeLicensePlate.SelectedItem = null;
+            comboTypeLicensePlate.Text = "License Plate Type";
+
+            initDataGridViewSource();
+        }
+
+        private void comboTypeLicensePlate_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboTypeLicensePlate.SelectedItem != null)
+            {
+                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+            }
+        }
+        #endregion
     }
 }
