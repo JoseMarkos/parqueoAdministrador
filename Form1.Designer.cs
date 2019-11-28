@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.panelData = new System.Windows.Forms.Panel();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnParqueos = new System.Windows.Forms.Button();
             this.panelHead = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.labelVehiculos = new System.Windows.Forms.Label();
@@ -102,23 +102,23 @@
             this.dgvVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVehiculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVehiculos.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVehiculos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVehiculos.GridColor = System.Drawing.SystemColors.Control;
             this.dgvVehiculos.Location = new System.Drawing.Point(15, 15);
@@ -127,16 +127,16 @@
             this.dgvVehiculos.ReadOnly = true;
             this.dgvVehiculos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVehiculos.RowHeadersVisible = false;
-            this.dgvVehiculos.Size = new System.Drawing.Size(580, 380);
+            this.dgvVehiculos.Size = new System.Drawing.Size(655, 380);
             this.dgvVehiculos.TabIndex = 0;
             // 
             // panelData
@@ -147,7 +147,7 @@
             this.panelData.Location = new System.Drawing.Point(0, 107);
             this.panelData.Name = "panelData";
             this.panelData.Padding = new System.Windows.Forms.Padding(15);
-            this.panelData.Size = new System.Drawing.Size(610, 410);
+            this.panelData.Size = new System.Drawing.Size(685, 410);
             this.panelData.TabIndex = 1;
             // 
             // splitMain
@@ -166,36 +166,39 @@
             // 
             this.splitMain.Panel2.Controls.Add(this.panelHead);
             this.splitMain.Panel2.Controls.Add(this.panelData);
-            this.splitMain.Size = new System.Drawing.Size(921, 517);
-            this.splitMain.SplitterDistance = 307;
+            this.splitMain.Size = new System.Drawing.Size(927, 517);
+            this.splitMain.SplitterDistance = 238;
             this.splitMain.TabIndex = 2;
             // 
             // panelMenu
             // 
             this.panelMenu.Controls.Add(this.btnVehicle);
-            this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Location = new System.Drawing.Point(18, 122);
+            this.panelMenu.Controls.Add(this.btnParqueos);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(271, 103);
+            this.panelMenu.Size = new System.Drawing.Size(238, 517);
             this.panelMenu.TabIndex = 4;
             // 
-            // button1
+            // btnParqueos
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(271, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Parqueos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnParqueos.BackColor = System.Drawing.Color.Transparent;
+            this.btnParqueos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnParqueos.FlatAppearance.BorderSize = 0;
+            this.btnParqueos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnParqueos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnParqueos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParqueos.ForeColor = System.Drawing.Color.White;
+            this.btnParqueos.Location = new System.Drawing.Point(0, 0);
+            this.btnParqueos.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnParqueos.Name = "btnParqueos";
+            this.btnParqueos.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnParqueos.Size = new System.Drawing.Size(238, 43);
+            this.btnParqueos.TabIndex = 3;
+            this.btnParqueos.Text = "Parqueos";
+            this.btnParqueos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParqueos.UseVisualStyleBackColor = false;
+            this.btnParqueos.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelHead
             // 
@@ -205,7 +208,7 @@
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
             this.panelHead.Padding = new System.Windows.Forms.Padding(15);
-            this.panelHead.Size = new System.Drawing.Size(610, 107);
+            this.panelHead.Size = new System.Drawing.Size(685, 107);
             this.panelHead.TabIndex = 2;
             // 
             // splitContainer2
@@ -225,7 +228,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.comboVehicleType);
             this.splitContainer2.Panel2.Controls.Add(this.comboTypeLicensePlate);
             this.splitContainer2.Panel2.Controls.Add(this.txtFilterOwner);
-            this.splitContainer2.Size = new System.Drawing.Size(580, 77);
+            this.splitContainer2.Size = new System.Drawing.Size(655, 77);
             this.splitContainer2.SplitterDistance = 38;
             this.splitContainer2.TabIndex = 4;
             // 
@@ -291,7 +294,7 @@
             this.panelCreateParking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCreateParking.Location = new System.Drawing.Point(0, 0);
             this.panelCreateParking.Name = "panelCreateParking";
-            this.panelCreateParking.Size = new System.Drawing.Size(921, 517);
+            this.panelCreateParking.Size = new System.Drawing.Size(927, 517);
             this.panelCreateParking.TabIndex = 0;
             this.panelCreateParking.Visible = false;
             // 
@@ -305,7 +308,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.panelParkingFields);
-            this.splitContainer1.Size = new System.Drawing.Size(921, 517);
+            this.splitContainer1.Size = new System.Drawing.Size(927, 517);
             this.splitContainer1.SplitterDistance = 434;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -319,7 +322,7 @@
             this.panelParkingFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParkingFields.Location = new System.Drawing.Point(0, 0);
             this.panelParkingFields.Name = "panelParkingFields";
-            this.panelParkingFields.Size = new System.Drawing.Size(921, 434);
+            this.panelParkingFields.Size = new System.Drawing.Size(927, 434);
             this.panelParkingFields.TabIndex = 0;
             // 
             // radio4
@@ -381,14 +384,13 @@
             this.splitParking.Panel1.BackColor = System.Drawing.Color.Indigo;
             this.splitParking.Panel1.Controls.Add(this.panel4);
             this.splitParking.Panel1.ForeColor = System.Drawing.Color.White;
-            this.splitParking.Panel1.Padding = new System.Windows.Forms.Padding(15);
             // 
             // splitParking.Panel2
             // 
             this.splitParking.Panel2.Controls.Add(this.panel1);
             this.splitParking.Panel2.Controls.Add(this.panel2);
-            this.splitParking.Size = new System.Drawing.Size(921, 517);
-            this.splitParking.SplitterDistance = 307;
+            this.splitParking.Size = new System.Drawing.Size(927, 517);
+            this.splitParking.SplitterDistance = 238;
             this.splitParking.TabIndex = 3;
             // 
             // panel1
@@ -399,7 +401,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(610, 107);
+            this.panel1.Size = new System.Drawing.Size(685, 107);
             this.panel1.TabIndex = 2;
             // 
             // splitContainer4
@@ -412,7 +414,7 @@
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.Controls.Add(this.labelParqueos);
-            this.splitContainer4.Size = new System.Drawing.Size(580, 77);
+            this.splitContainer4.Size = new System.Drawing.Size(655, 77);
             this.splitContainer4.SplitterDistance = 38;
             this.splitContainer4.TabIndex = 4;
             // 
@@ -434,7 +436,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 107);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(610, 410);
+            this.panel2.Size = new System.Drawing.Size(685, 410);
             this.panel2.TabIndex = 1;
             // 
             // dgvParqueos
@@ -445,23 +447,23 @@
             this.dgvParqueos.BackgroundColor = System.Drawing.Color.White;
             this.dgvParqueos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvParqueos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParqueos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParqueos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvParqueos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvParqueos.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvParqueos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvParqueos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvParqueos.GridColor = System.Drawing.SystemColors.Control;
             this.dgvParqueos.Location = new System.Drawing.Point(15, 15);
@@ -470,16 +472,16 @@
             this.dgvParqueos.ReadOnly = true;
             this.dgvParqueos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvParqueos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvParqueos.RowHeadersVisible = false;
-            this.dgvParqueos.Size = new System.Drawing.Size(580, 380);
+            this.dgvParqueos.Size = new System.Drawing.Size(655, 380);
             this.dgvParqueos.TabIndex = 0;
             // 
             // btnVehicle
@@ -491,12 +493,14 @@
             this.btnVehicle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.btnVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehicle.ForeColor = System.Drawing.Color.White;
-            this.btnVehicle.Location = new System.Drawing.Point(0, 23);
+            this.btnVehicle.Location = new System.Drawing.Point(0, 43);
             this.btnVehicle.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnVehicle.Name = "btnVehicle";
-            this.btnVehicle.Size = new System.Drawing.Size(271, 23);
+            this.btnVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnVehicle.Size = new System.Drawing.Size(238, 43);
             this.btnVehicle.TabIndex = 4;
             this.btnVehicle.Text = "Vehiculos";
+            this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehicle.UseVisualStyleBackColor = false;
             this.btnVehicle.Click += new System.EventHandler(this.Vehiculos_Click);
             // 
@@ -504,9 +508,10 @@
             // 
             this.panel4.Controls.Add(this.btnVehiculos2);
             this.panel4.Controls.Add(this.btnParqueos2);
-            this.panel4.Location = new System.Drawing.Point(18, 122);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(271, 103);
+            this.panel4.Size = new System.Drawing.Size(238, 517);
             this.panel4.TabIndex = 5;
             // 
             // btnVehiculos2
@@ -518,12 +523,14 @@
             this.btnVehiculos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.btnVehiculos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculos2.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos2.Location = new System.Drawing.Point(0, 23);
+            this.btnVehiculos2.Location = new System.Drawing.Point(0, 43);
             this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnVehiculos2.Name = "btnVehiculos2";
-            this.btnVehiculos2.Size = new System.Drawing.Size(271, 23);
+            this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnVehiculos2.Size = new System.Drawing.Size(238, 43);
             this.btnVehiculos2.TabIndex = 4;
             this.btnVehiculos2.Text = "Vehiculos";
+            this.btnVehiculos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVehiculos2.UseVisualStyleBackColor = false;
             this.btnVehiculos2.Click += new System.EventHandler(this.btnVehiculos2_Click);
             // 
@@ -539,9 +546,11 @@
             this.btnParqueos2.Location = new System.Drawing.Point(0, 0);
             this.btnParqueos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnParqueos2.Name = "btnParqueos2";
-            this.btnParqueos2.Size = new System.Drawing.Size(271, 23);
+            this.btnParqueos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnParqueos2.Size = new System.Drawing.Size(238, 43);
             this.btnParqueos2.TabIndex = 3;
             this.btnParqueos2.Text = "Parqueos";
+            this.btnParqueos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnParqueos2.UseVisualStyleBackColor = false;
             this.btnParqueos2.Click += new System.EventHandler(this.btnParqueos2_Click);
             // 
@@ -549,7 +558,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 517);
+            this.ClientSize = new System.Drawing.Size(927, 517);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.splitParking);
             this.Controls.Add(this.panelCreateParking);
@@ -622,7 +631,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvParqueos;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnParqueos;
         private System.Windows.Forms.Button btnVehicle;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnVehiculos2;
