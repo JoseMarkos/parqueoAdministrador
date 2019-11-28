@@ -154,7 +154,7 @@ namespace ParqueoAdministrator
             }
         }
 
-        public licensePlatePrefixLevel GetLicensePlatePrefixLevel(licensePlatePrefix licensePlatePrefix)
+        private licensePlatePrefixLevel GetLicensePlatePrefixLevel(licensePlatePrefix licensePlatePrefix)
         {
             switch (licensePlatePrefix)
             {

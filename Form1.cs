@@ -138,7 +138,6 @@ namespace ParqueoAdministrator
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowId = e.RowIndex;
-            labelVehiculos.Text = rowId.ToString();
         }
 
         #region Filter
@@ -158,7 +157,7 @@ namespace ParqueoAdministrator
         private void btnClearFilters_Click(object sender, EventArgs e)
         {
             txtFilterOwner.Text = "";
-            
+
             comboVehicleType.SelectedItem = null;
             comboVehicleType.Text = "Type";
 

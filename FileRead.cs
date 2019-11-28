@@ -1,7 +1,6 @@
 ﻿using proyectoLibrary.Modelos;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
@@ -11,7 +10,7 @@ namespace ParqueoAdministrator
         public string PathParking { get; set; }
         private List<Vehicle> listVehicles = new List<Vehicle>();
         private List<Parking> listParkings = new List<Parking>();
-       
+
         public List<Vehicle> ReadVehicleFile()
         {
             string line;
@@ -81,7 +80,7 @@ namespace ParqueoAdministrator
                 {
                     _services.Add(servicesArray[i]);
                 }
-                
+
                 byte.TryParse(lineArray[3], out _normal);
                 byte.TryParse(lineArray[4], out _big);
 
@@ -96,7 +95,7 @@ namespace ParqueoAdministrator
                         parking.DiscountFreeSpaces();
                     }
                 }
-                
+
                 listParkings.Add(parking);
             }
 
