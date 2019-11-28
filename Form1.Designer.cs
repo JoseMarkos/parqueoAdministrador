@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelData = new System.Windows.Forms.Panel();
             this.splitMain = new System.Windows.Forms.SplitContainer();
-            this.panelFilters = new System.Windows.Forms.Panel();
+            this.panelHead = new System.Windows.Forms.Panel();
+            this.comboTypeLicensePlate = new System.Windows.Forms.ComboBox();
             this.btnClearFilters = new System.Windows.Forms.Button();
             this.comboVehicleType = new System.Windows.Forms.ComboBox();
             this.txtFilterOwner = new System.Windows.Forms.TextBox();
@@ -46,18 +47,23 @@
             this.radio3 = new System.Windows.Forms.RadioButton();
             this.radio1 = new System.Windows.Forms.RadioButton();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.comboTypeLicensePlate = new System.Windows.Forms.ComboBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel2.SuspendLayout();
             this.splitMain.SuspendLayout();
-            this.panelFilters.SuspendLayout();
+            this.panelHead.SuspendLayout();
             this.panelCreateParking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panelParkingFields.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -68,49 +74,51 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 15);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(610, 410);
+            this.dataGridView1.Size = new System.Drawing.Size(580, 380);
             this.dataGridView1.TabIndex = 0;
             // 
             // panelData
             // 
+            this.panelData.BackColor = System.Drawing.Color.White;
             this.panelData.Controls.Add(this.dataGridView1);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelData.Location = new System.Drawing.Point(0, 107);
             this.panelData.Name = "panelData";
+            this.panelData.Padding = new System.Windows.Forms.Padding(15);
             this.panelData.Size = new System.Drawing.Size(610, 410);
             this.panelData.TabIndex = 1;
             // 
@@ -127,40 +135,55 @@
             // 
             // splitMain.Panel2
             // 
-            this.splitMain.Panel2.Controls.Add(this.panelFilters);
+            this.splitMain.Panel2.Controls.Add(this.panelHead);
             this.splitMain.Panel2.Controls.Add(this.panelData);
             this.splitMain.Size = new System.Drawing.Size(921, 517);
             this.splitMain.SplitterDistance = 307;
             this.splitMain.TabIndex = 2;
             // 
-            // panelFilters
+            // panelHead
             // 
-            this.panelFilters.BackColor = System.Drawing.Color.White;
-            this.panelFilters.Controls.Add(this.comboTypeLicensePlate);
-            this.panelFilters.Controls.Add(this.btnClearFilters);
-            this.panelFilters.Controls.Add(this.comboVehicleType);
-            this.panelFilters.Controls.Add(this.txtFilterOwner);
-            this.panelFilters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFilters.Location = new System.Drawing.Point(0, 0);
-            this.panelFilters.Name = "panelFilters";
-            this.panelFilters.Size = new System.Drawing.Size(610, 107);
-            this.panelFilters.TabIndex = 2;
+            this.panelHead.BackColor = System.Drawing.Color.White;
+            this.panelHead.Controls.Add(this.splitContainer2);
+            this.panelHead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHead.Location = new System.Drawing.Point(0, 0);
+            this.panelHead.Name = "panelHead";
+            this.panelHead.Padding = new System.Windows.Forms.Padding(15);
+            this.panelHead.Size = new System.Drawing.Size(610, 107);
+            this.panelHead.TabIndex = 2;
+            // 
+            // comboTypeLicensePlate
+            // 
+            this.comboTypeLicensePlate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboTypeLicensePlate.FormattingEnabled = true;
+            this.comboTypeLicensePlate.Location = new System.Drawing.Point(292, 7);
+            this.comboTypeLicensePlate.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.comboTypeLicensePlate.Name = "comboTypeLicensePlate";
+            this.comboTypeLicensePlate.Size = new System.Drawing.Size(121, 21);
+            this.comboTypeLicensePlate.TabIndex = 3;
+            this.comboTypeLicensePlate.Text = "License Plate Type";
+            this.comboTypeLicensePlate.SelectedValueChanged += new System.EventHandler(this.comboTypeLicensePlate_SelectedValueChanged);
             // 
             // btnClearFilters
             // 
-            this.btnClearFilters.Location = new System.Drawing.Point(500, 64);
+            this.btnClearFilters.BackColor = System.Drawing.Color.DimGray;
+            this.btnClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearFilters.ForeColor = System.Drawing.Color.White;
+            this.btnClearFilters.Location = new System.Drawing.Point(479, 5);
+            this.btnClearFilters.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnClearFilters.Name = "btnClearFilters";
             this.btnClearFilters.Size = new System.Drawing.Size(98, 23);
             this.btnClearFilters.TabIndex = 2;
             this.btnClearFilters.Text = "Clear Filter";
-            this.btnClearFilters.UseVisualStyleBackColor = true;
+            this.btnClearFilters.UseVisualStyleBackColor = false;
             this.btnClearFilters.Click += new System.EventHandler(this.btnClearFilters_Click);
             // 
             // comboVehicleType
             // 
             this.comboVehicleType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboVehicleType.FormattingEnabled = true;
-            this.comboVehicleType.Location = new System.Drawing.Point(179, 66);
+            this.comboVehicleType.Location = new System.Drawing.Point(163, 7);
+            this.comboVehicleType.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.comboVehicleType.Name = "comboVehicleType";
             this.comboVehicleType.Size = new System.Drawing.Size(121, 21);
             this.comboVehicleType.TabIndex = 1;
@@ -169,7 +192,7 @@
             // 
             // txtFilterOwner
             // 
-            this.txtFilterOwner.Location = new System.Drawing.Point(3, 66);
+            this.txtFilterOwner.Location = new System.Drawing.Point(3, 7);
             this.txtFilterOwner.Name = "txtFilterOwner";
             this.txtFilterOwner.Size = new System.Drawing.Size(152, 20);
             this.txtFilterOwner.TabIndex = 0;
@@ -260,16 +283,36 @@
             this.txtName.TabIndex = 0;
             this.txtName.Tag = "Name";
             // 
-            // comboTypeLicensePlate
+            // splitContainer2
             // 
-            this.comboTypeLicensePlate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboTypeLicensePlate.FormattingEnabled = true;
-            this.comboTypeLicensePlate.Location = new System.Drawing.Point(315, 66);
-            this.comboTypeLicensePlate.Name = "comboTypeLicensePlate";
-            this.comboTypeLicensePlate.Size = new System.Drawing.Size(121, 21);
-            this.comboTypeLicensePlate.TabIndex = 3;
-            this.comboTypeLicensePlate.Text = "License Plate Type";
-            this.comboTypeLicensePlate.SelectedValueChanged += new System.EventHandler(this.comboTypeLicensePlate_SelectedValueChanged);
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(15, 15);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.btnClearFilters);
+            this.splitContainer2.Panel2.Controls.Add(this.comboVehicleType);
+            this.splitContainer2.Panel2.Controls.Add(this.comboTypeLicensePlate);
+            this.splitContainer2.Panel2.Controls.Add(this.txtFilterOwner);
+            this.splitContainer2.Size = new System.Drawing.Size(580, 77);
+            this.splitContainer2.SplitterDistance = 38;
+            this.splitContainer2.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Vehiculos";
             // 
             // Form1
             // 
@@ -287,14 +330,19 @@
             this.splitMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).EndInit();
             this.splitMain.ResumeLayout(false);
-            this.panelFilters.ResumeLayout(false);
-            this.panelFilters.PerformLayout();
+            this.panelHead.ResumeLayout(false);
             this.panelCreateParking.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panelParkingFields.ResumeLayout(false);
             this.panelParkingFields.PerformLayout();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -306,7 +354,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panelData;
         private System.Windows.Forms.SplitContainer splitMain;
-        private System.Windows.Forms.Panel panelFilters;
+        private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Panel panelCreateParking;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panelParkingFields;
@@ -319,6 +367,8 @@
         private System.Windows.Forms.ComboBox comboVehicleType;
         private System.Windows.Forms.Button btnClearFilters;
         private System.Windows.Forms.ComboBox comboTypeLicensePlate;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
