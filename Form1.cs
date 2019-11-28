@@ -15,7 +15,7 @@ namespace ParqueoAdministrator
 {
     public partial class Form1 : Form
     {
-        public static List<CuentaParqueo> listaCuentaParqueo = new List<CuentaParqueo>();
+        public static List<Parking> ListaParqueos = new List<Parking>();
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
         private Filter filter = new Filter();
         public Form1()
@@ -62,6 +62,17 @@ namespace ParqueoAdministrator
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
 
+            // Adding parkings to the list
+
+            List<string> parqueo1Servicios = new List<string>();
+            parqueo1Servicios.Add("CarWash");
+
+            Parking parqueo1 = new Parking("Parqueo1", Parking.ParkingQuadrant.NorthEast, parqueo1Servicios, 10, 5);
+
+            ListaParqueos.Add(parqueo1);
+            initDataGridViewSource(ListaParqueos);
+
+            //
 
             //radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
             //radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
@@ -71,14 +82,14 @@ namespace ParqueoAdministrator
 
         private void txtFilterOwner_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = filter.ByOwner(txtFilterOwner.Text);
-            dataGridView1.Refresh();
+            dgvVehiculos.DataSource = filter.ByOwner(txtFilterOwner.Text);
+            dgvVehiculos.Refresh();
         }
 
         private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
-            dataGridView1.Refresh();
+            dgvVehiculos.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
+            dgvVehiculos.Refresh();
         }
 
         private void btnClearFilters_Click(object sender, EventArgs e)
@@ -96,15 +107,26 @@ namespace ParqueoAdministrator
                 DataSource = listaVehiculos
             };
 
-            dataGridView1.DataSource = bindingSource;
-            dataGridView1.Refresh();
+            dgvVehiculos.DataSource = bindingSource;
+            dgvVehiculos.Refresh();
+        }
+
+        private void initDataGridViewSource(List<Parking> list)
+        {
+            BindingSource bindingSource = new BindingSource
+            {
+                DataSource = list
+            };
+
+            dgvParqueos.DataSource = bindingSource;
+            dgvParqueos.Refresh();
         }
 
         private void comboTypeLicensePlate_SelectedValueChanged(object sender, EventArgs e)
         {
 
-            dataGridView1.DataSource = filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem);
-            dataGridView1.Refresh();
+            dgvVehiculos.DataSource = filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem);
+            dgvVehiculos.Refresh();
         }
     }
 }
