@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace ParqueoAdministrator
 {
@@ -11,7 +6,7 @@ namespace ParqueoAdministrator
     {
         public static int counter = 0;
         private static readonly string currentDirectory = Directory.GetCurrentDirectory();
-        private readonly string ParkingPath = currentDirectory + "//parkings" ;
+        private readonly string ParkingPath = currentDirectory + "//parkings";
 
         public FileManager()
         {

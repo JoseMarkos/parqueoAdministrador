@@ -1,14 +1,6 @@
-﻿using proyectoLibrary;
-using proyectoLibrary.Modelos;
+﻿using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ParqueoAdministrator
@@ -70,6 +62,11 @@ namespace ParqueoAdministrator
             Parking parqueo1 = new Parking("Parqueo1", Parking.ParkingQuadrant.NorthEast, parqueo1Servicios, 10, 5);
 
             ListaParqueos.Add(parqueo1);
+
+            parqueo1.DiscountFreeSpaces();
+            parqueo1.DiscountFreeSpaces();
+            parqueo1.DiscountFreeSpaces();
+
             initDataGridViewSource(ListaParqueos);
 
             //

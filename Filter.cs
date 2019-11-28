@@ -1,11 +1,6 @@
-﻿using proyectoLibrary;
-using proyectoLibrary.Modelos;
+﻿using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
@@ -99,7 +94,7 @@ namespace ParqueoAdministrator
                 switch (prefixLevel)
                 {
                     case licensePlatePrefixLevel.one:
-                        
+
                         char licensePlatePrefixChar = Convert.ToChar(licensePlatePrefix.ToString());
 
                         // index 1 because of white space in the file:
@@ -111,7 +106,7 @@ namespace ParqueoAdministrator
 
                         break;
                     case licensePlatePrefixLevel.two:
-                        
+
                         string licenPlaceFirstTwoChars = item.LicensePlate[1].ToString() + item.LicensePlate[2].ToString();
 
                         if (licensePlatePrefixString == licenPlaceFirstTwoChars)
@@ -122,8 +117,8 @@ namespace ParqueoAdministrator
                         break;
                     case licensePlatePrefixLevel.tree:
 
-                        string licenPlaceFirstThreeChars 
-                            = item.LicensePlate[1].ToString() 
+                        string licenPlaceFirstThreeChars
+                            = item.LicensePlate[1].ToString()
                             + item.LicensePlate[2].ToString()
                             + item.LicensePlate[3].ToString();
 

@@ -1,10 +1,6 @@
 ﻿using proyectoLibrary.Modelos;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParqueoAdministrator
 {
@@ -38,7 +34,7 @@ namespace ParqueoAdministrator
                     _ownerID = 0;
                 }
 
-                _type = (Vehicle.Vehicletype) int.Parse(lineArray[2]);
+                _type = (Vehicle.Vehicletype)int.Parse(lineArray[2]);
                 _licensePlate = lineArray[0] is null ? "" : lineArray[3];
                 _parking = lineArray[0] is null ? "" : lineArray[4];
 
