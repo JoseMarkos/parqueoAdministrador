@@ -22,10 +22,11 @@ namespace ParqueoAdministrator
             FileManager fileManager = new FileManager();
 
             FileRead fileRead = new FileRead();
-            fileRead.Path = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\default.txt";
+            fileRead.PathVehicle = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\default.txt";
+            fileRead.PathParking = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\parkingList.txt";
 
-            listaVehiculos = fileRead.ReadFile();
-
+            listaVehiculos = fileRead.ReadVehicleFile();
+            
             initDataGridViewSource();
 
             // Adding options to comboVehicleType filter
@@ -54,19 +55,9 @@ namespace ParqueoAdministrator
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
 
-            // Adding parkings to the list
+            // Adding parkings to the listVehicles
 
-            List<string> parqueo1Servicios = new List<string>();
-            parqueo1Servicios.Add("CarWash");
-
-            Parking parqueo1 = new Parking("Parqueo1", Parking.ParkingQuadrant.NorthEast, parqueo1Servicios, 10, 5);
-
-            ListaParqueos.Add(parqueo1);
-
-            parqueo1.DiscountFreeSpaces();
-            parqueo1.DiscountFreeSpaces();
-            parqueo1.DiscountFreeSpaces();
-
+            ListaParqueos = fileRead.ReadParkingFile();
             initDataGridViewSource(ListaParqueos);
 
             //
