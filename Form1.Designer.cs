@@ -1,6 +1,6 @@
 ﻿namespace ParqueoAdministrator
 {
-    partial class Form1
+    partial class Administrator
     {
         /// <summary>
         /// Required designer variable.
@@ -65,6 +65,7 @@
             this.labelParqueos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvParqueos = new System.Windows.Forms.DataGridView();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -93,6 +94,10 @@
             this.splitContainer4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParqueos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvVehiculos
@@ -137,7 +142,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVehiculos.RowHeadersVisible = false;
-            this.dgvVehiculos.Size = new System.Drawing.Size(655, 380);
+            this.dgvVehiculos.Size = new System.Drawing.Size(574, 335);
             this.dgvVehiculos.TabIndex = 0;
             this.dgvVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculos_CellClick);
             // 
@@ -146,10 +151,10 @@
             this.panelData.BackColor = System.Drawing.Color.White;
             this.panelData.Controls.Add(this.dgvVehiculos);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelData.Location = new System.Drawing.Point(0, 107);
+            this.panelData.Location = new System.Drawing.Point(0, 152);
             this.panelData.Name = "panelData";
             this.panelData.Padding = new System.Windows.Forms.Padding(15);
-            this.panelData.Size = new System.Drawing.Size(685, 410);
+            this.panelData.Size = new System.Drawing.Size(604, 365);
             this.panelData.TabIndex = 1;
             // 
             // splitMain
@@ -168,8 +173,8 @@
             // 
             this.splitMain.Panel2.Controls.Add(this.panelHead);
             this.splitMain.Panel2.Controls.Add(this.panelData);
-            this.splitMain.Size = new System.Drawing.Size(927, 517);
-            this.splitMain.SplitterDistance = 238;
+            this.splitMain.Size = new System.Drawing.Size(817, 517);
+            this.splitMain.SplitterDistance = 209;
             this.splitMain.TabIndex = 2;
             // 
             // panelMenu
@@ -179,7 +184,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(238, 517);
+            this.panelMenu.Size = new System.Drawing.Size(209, 517);
             this.panelMenu.TabIndex = 4;
             // 
             // btnVehicle
@@ -195,7 +200,7 @@
             this.btnVehicle.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnVehicle.Name = "btnVehicle";
             this.btnVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehicle.Size = new System.Drawing.Size(238, 43);
+            this.btnVehicle.Size = new System.Drawing.Size(209, 43);
             this.btnVehicle.TabIndex = 4;
             this.btnVehicle.Text = "Vehiculos";
             this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,7 +220,7 @@
             this.btnParqueos.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnParqueos.Name = "btnParqueos";
             this.btnParqueos.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnParqueos.Size = new System.Drawing.Size(238, 43);
+            this.btnParqueos.Size = new System.Drawing.Size(209, 43);
             this.btnParqueos.TabIndex = 3;
             this.btnParqueos.Text = "Parqueos";
             this.btnParqueos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,21 +234,19 @@
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Padding = new System.Windows.Forms.Padding(15);
-            this.panelHead.Size = new System.Drawing.Size(685, 107);
+            this.panelHead.Size = new System.Drawing.Size(604, 152);
             this.panelHead.TabIndex = 2;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(15, 15);
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.btnGetOut);
-            this.splitContainer2.Panel1.Controls.Add(this.labelVehiculos);
+            this.splitContainer2.Panel1.Controls.Add(this.splitContainer3);
             // 
             // splitContainer2.Panel2
             // 
@@ -251,16 +254,17 @@
             this.splitContainer2.Panel2.Controls.Add(this.comboVehicleType);
             this.splitContainer2.Panel2.Controls.Add(this.comboTypeLicensePlate);
             this.splitContainer2.Panel2.Controls.Add(this.txtFilterOwner);
-            this.splitContainer2.Size = new System.Drawing.Size(655, 77);
-            this.splitContainer2.SplitterDistance = 38;
+            this.splitContainer2.Size = new System.Drawing.Size(604, 152);
+            this.splitContainer2.SplitterDistance = 103;
             this.splitContainer2.TabIndex = 4;
             // 
             // btnGetOut
             // 
             this.btnGetOut.BackColor = System.Drawing.Color.Red;
+            this.btnGetOut.FlatAppearance.BorderSize = 0;
             this.btnGetOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetOut.ForeColor = System.Drawing.Color.White;
-            this.btnGetOut.Location = new System.Drawing.Point(554, 12);
+            this.btnGetOut.Location = new System.Drawing.Point(15, 14);
             this.btnGetOut.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnGetOut.Name = "btnGetOut";
             this.btnGetOut.Size = new System.Drawing.Size(98, 23);
@@ -273,7 +277,7 @@
             // 
             this.labelVehiculos.AutoSize = true;
             this.labelVehiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVehiculos.Location = new System.Drawing.Point(3, 0);
+            this.labelVehiculos.Location = new System.Drawing.Point(14, 15);
             this.labelVehiculos.Name = "labelVehiculos";
             this.labelVehiculos.Size = new System.Drawing.Size(103, 24);
             this.labelVehiculos.TabIndex = 0;
@@ -284,7 +288,7 @@
             this.btnClearFilters.BackColor = System.Drawing.Color.Black;
             this.btnClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilters.ForeColor = System.Drawing.Color.White;
-            this.btnClearFilters.Location = new System.Drawing.Point(554, 7);
+            this.btnClearFilters.Location = new System.Drawing.Point(460, 11);
             this.btnClearFilters.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnClearFilters.Name = "btnClearFilters";
             this.btnClearFilters.Size = new System.Drawing.Size(98, 23);
@@ -297,7 +301,7 @@
             // 
             this.comboVehicleType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboVehicleType.FormattingEnabled = true;
-            this.comboVehicleType.Location = new System.Drawing.Point(163, 7);
+            this.comboVehicleType.Location = new System.Drawing.Point(184, 12);
             this.comboVehicleType.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.comboVehicleType.Name = "comboVehicleType";
             this.comboVehicleType.Size = new System.Drawing.Size(121, 21);
@@ -309,7 +313,7 @@
             // 
             this.comboTypeLicensePlate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTypeLicensePlate.FormattingEnabled = true;
-            this.comboTypeLicensePlate.Location = new System.Drawing.Point(292, 7);
+            this.comboTypeLicensePlate.Location = new System.Drawing.Point(322, 13);
             this.comboTypeLicensePlate.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.comboTypeLicensePlate.Name = "comboTypeLicensePlate";
             this.comboTypeLicensePlate.Size = new System.Drawing.Size(121, 21);
@@ -319,7 +323,7 @@
             // 
             // txtFilterOwner
             // 
-            this.txtFilterOwner.Location = new System.Drawing.Point(3, 7);
+            this.txtFilterOwner.Location = new System.Drawing.Point(15, 12);
             this.txtFilterOwner.Name = "txtFilterOwner";
             this.txtFilterOwner.Size = new System.Drawing.Size(152, 20);
             this.txtFilterOwner.TabIndex = 0;
@@ -331,7 +335,7 @@
             this.panelCreateParking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCreateParking.Location = new System.Drawing.Point(0, 0);
             this.panelCreateParking.Name = "panelCreateParking";
-            this.panelCreateParking.Size = new System.Drawing.Size(927, 517);
+            this.panelCreateParking.Size = new System.Drawing.Size(817, 517);
             this.panelCreateParking.TabIndex = 0;
             this.panelCreateParking.Visible = false;
             // 
@@ -345,7 +349,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.panelParkingFields);
-            this.splitContainer1.Size = new System.Drawing.Size(927, 517);
+            this.splitContainer1.Size = new System.Drawing.Size(817, 517);
             this.splitContainer1.SplitterDistance = 434;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -359,7 +363,7 @@
             this.panelParkingFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParkingFields.Location = new System.Drawing.Point(0, 0);
             this.panelParkingFields.Name = "panelParkingFields";
-            this.panelParkingFields.Size = new System.Drawing.Size(927, 434);
+            this.panelParkingFields.Size = new System.Drawing.Size(817, 434);
             this.panelParkingFields.TabIndex = 0;
             // 
             // radio4
@@ -426,8 +430,8 @@
             // 
             this.splitParking.Panel2.Controls.Add(this.panel1);
             this.splitParking.Panel2.Controls.Add(this.panel2);
-            this.splitParking.Size = new System.Drawing.Size(927, 517);
-            this.splitParking.SplitterDistance = 238;
+            this.splitParking.Size = new System.Drawing.Size(817, 517);
+            this.splitParking.SplitterDistance = 209;
             this.splitParking.TabIndex = 3;
             // 
             // panel4
@@ -437,7 +441,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 517);
+            this.panel4.Size = new System.Drawing.Size(209, 517);
             this.panel4.TabIndex = 5;
             // 
             // btnVehiculos2
@@ -453,7 +457,7 @@
             this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnVehiculos2.Name = "btnVehiculos2";
             this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehiculos2.Size = new System.Drawing.Size(238, 43);
+            this.btnVehiculos2.Size = new System.Drawing.Size(209, 43);
             this.btnVehiculos2.TabIndex = 4;
             this.btnVehiculos2.Text = "Vehiculos";
             this.btnVehiculos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -473,7 +477,7 @@
             this.btnParqueos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnParqueos2.Name = "btnParqueos2";
             this.btnParqueos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnParqueos2.Size = new System.Drawing.Size(238, 43);
+            this.btnParqueos2.Size = new System.Drawing.Size(209, 43);
             this.btnParqueos2.TabIndex = 3;
             this.btnParqueos2.Text = "Parqueos";
             this.btnParqueos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -488,7 +492,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(685, 107);
+            this.panel1.Size = new System.Drawing.Size(604, 86);
             this.panel1.TabIndex = 2;
             // 
             // splitContainer4
@@ -501,8 +505,8 @@
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.Controls.Add(this.labelParqueos);
-            this.splitContainer4.Size = new System.Drawing.Size(655, 77);
-            this.splitContainer4.SplitterDistance = 38;
+            this.splitContainer4.Size = new System.Drawing.Size(574, 56);
+            this.splitContainer4.SplitterDistance = 27;
             this.splitContainer4.TabIndex = 4;
             // 
             // labelParqueos
@@ -520,10 +524,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dgvParqueos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 107);
+            this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(685, 410);
+            this.panel2.Size = new System.Drawing.Size(604, 431);
             this.panel2.TabIndex = 1;
             // 
             // dgvParqueos
@@ -568,20 +572,39 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvParqueos.RowHeadersVisible = false;
-            this.dgvParqueos.Size = new System.Drawing.Size(655, 380);
+            this.dgvParqueos.Size = new System.Drawing.Size(574, 401);
             this.dgvParqueos.TabIndex = 0;
             // 
-            // Form1
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.labelVehiculos);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer3.Panel2.Controls.Add(this.btnGetOut);
+            this.splitContainer3.Size = new System.Drawing.Size(604, 103);
+            this.splitContainer3.SplitterDistance = 48;
+            this.splitContainer3.TabIndex = 1;
+            // 
+            // Administrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 517);
+            this.ClientSize = new System.Drawing.Size(817, 517);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.splitParking);
             this.Controls.Add(this.panelCreateParking);
-            this.Name = "Form1";
+            this.Name = "Administrator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Administrator";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.panelData.ResumeLayout(false);
@@ -592,7 +615,6 @@
             this.panelMenu.ResumeLayout(false);
             this.panelHead.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -615,6 +637,11 @@
             this.splitContainer4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParqueos)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -654,6 +681,7 @@
         private System.Windows.Forms.Button btnVehiculos2;
         private System.Windows.Forms.Button btnParqueos2;
         private System.Windows.Forms.Button btnGetOut;
+        private System.Windows.Forms.SplitContainer splitContainer3;
     }
 }
 

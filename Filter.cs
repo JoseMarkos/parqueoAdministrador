@@ -38,7 +38,7 @@ namespace ParqueoAdministrator
         {
             List<Vehicle> list = new List<Vehicle>();
 
-            foreach (var item in Form1.listaVehiculos)
+            foreach (var item in Administrator.listaVehiculos)
             {
                 if (item.Type == type)
                 {
@@ -55,7 +55,7 @@ namespace ParqueoAdministrator
 
             List<Vehicle> list = new List<Vehicle>();
 
-            foreach (var item in Form1.listaVehiculos)
+            foreach (var item in Administrator.listaVehiculos)
             {
                 string[] ownerArray = item.Owner.ToLower().Split();
 
@@ -73,14 +73,14 @@ namespace ParqueoAdministrator
                 return list;
             }
 
-            return Form1.listaVehiculos;
+            return Administrator.listaVehiculos;
         }
 
         public List<Vehicle> ByLisencePlate(licensePlatePrefix licensePlatePrefix)
         {
             List<Vehicle> list = new List<Vehicle>();
 
-            foreach (var item in Form1.listaVehiculos)
+            foreach (var item in Administrator.listaVehiculos)
             {
                 licensePlatePrefixLevel prefixLevel = GetLicensePlatePrefixLevel(licensePlatePrefix);
 
@@ -136,7 +136,7 @@ namespace ParqueoAdministrator
                 return list;
             }
 
-            return Form1.listaVehiculos;
+            return Administrator.listaVehiculos;
         }
 
         public licensePlatePrefixLevel GetLicensePlatePrefixLevel(licensePlatePrefix licensePlatePrefix)

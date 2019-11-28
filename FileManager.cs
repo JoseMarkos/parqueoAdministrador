@@ -1,7 +1,6 @@
 ﻿using proyectoLibrary.Modelos;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
@@ -25,7 +24,7 @@ namespace ParqueoAdministrator
             }
 
             string filePath = ParkingPath + "\\" + name;
-            MessageBox.Show(filePath);
+
             Stream stream = File.Create(filePath);
             stream.Close();
         }
@@ -45,9 +44,9 @@ namespace ParqueoAdministrator
                 {
                     sw.Write(item.Owner is null ? "" : "" + item.Owner);
                     sw.Write(item.OwnerID is 0 ? ", " : ", " + item.OwnerID);
-                    sw.Write(", " + item.Type);
-                    sw.Write(item.LicensePlate is null ? ", " : ", " + item.LicensePlate);
-                    sw.Write(item.Parking is null ? ", " : ", " + item.Parking);
+                    sw.Write(", " + (int)item.Type);
+                    sw.Write(item.LicensePlate is null ? ", " : "," + item.LicensePlate);
+                    sw.Write(item.Parking is null ? ", " : "," + item.Parking);
 
                     sw.Write("\n");
                 }

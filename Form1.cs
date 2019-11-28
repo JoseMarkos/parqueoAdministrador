@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
-    public partial class Form1 : Form
+    public partial class Administrator : Form
     {
         public static List<Parking> ListaParqueos = new List<Parking>();
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
@@ -13,7 +13,7 @@ namespace ParqueoAdministrator
         private FileRead fileRead = new FileRead();
         private int rowId;
 
-        public Form1()
+        public Administrator()
         {
             InitializeComponent();
         }
