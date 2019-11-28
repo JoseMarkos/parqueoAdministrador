@@ -144,8 +144,7 @@ namespace ParqueoAdministrator
         #region Filter
         private void txtFilterOwner_TextChanged(object sender, EventArgs e)
         {
-            dgvVehiculos.DataSource = filter.ByOwner(txtFilterOwner.Text);
-            dgvVehiculos.Refresh();
+            filter.ByOwner(txtFilterOwner.Text, dgvVehiculos);
         }
 
         private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
@@ -158,7 +157,7 @@ namespace ParqueoAdministrator
 
         private void btnClearFilters_Click(object sender, EventArgs e)
         {
-            txtFilterOwner.Text = string.Empty;
+            txtFilterOwner.Text = "";
             
             comboVehicleType.SelectedItem = null;
             comboVehicleType.Text = "Type";

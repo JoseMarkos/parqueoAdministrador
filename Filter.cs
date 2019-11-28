@@ -51,31 +51,42 @@ namespace ParqueoAdministrator
             }
         }
 
-        public List<Vehicle> ByOwner(string name)
+        public void ByOwner(string name, DataGridView dgv)
         {
+            DataGridViewRowCollection collection = dgv.Rows;
+            dgv.CurrentCell = null;
+
             name = name.ToLower();
 
-            List<Vehicle> list = new List<Vehicle>();
+            List<int> list = new List<int>();
 
-            foreach (var item in Administrator.listaVehiculos)
+            for (int i = 0; i < Administrator.listaVehiculos.Count; i++)
             {
-                string[] ownerArray = item.Owner.ToLower().Split();
-
-                for (int i = 0; i < ownerArray.Length; i++)
+                if (name == String.Empty)
                 {
-                    if (name == ownerArray[i])
+                    list.Add(i);
+                }
+
+                else
+                {
+                    collection[i].Visible = false;
+
+                    string[] ownerArray = Administrator.listaVehiculos[i].Owner.ToLower().Split();
+
+                    for (int j = 0; j < ownerArray.Length; j++)
                     {
-                        list.Add(item);
+                        if (name == ownerArray[j])
+                        {
+                            list.Add(i);
+                        }
                     }
                 }
             }
 
-            if (list.Count > 0)
+            foreach (var item in list)
             {
-                return list;
+                collection[item].Visible = true;
             }
-
-            return Administrator.listaVehiculos;
         }
 
         public void ByLisencePlate(licensePlatePrefix licensePlatePrefix, DataGridView dgv)
@@ -114,9 +125,9 @@ namespace ParqueoAdministrator
                         break;
                     case licensePlatePrefixLevel.two:
 
-                        string licenPlaceFirstTwoChars 
-                            =  Administrator.listaVehiculos[i].LicensePlate[1].ToString() 
-                            +  Administrator.listaVehiculos[i].LicensePlate[2].ToString();
+                        string licenPlaceFirstTwoChars
+                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstTwoChars)
                         {
@@ -128,9 +139,9 @@ namespace ParqueoAdministrator
                     case licensePlatePrefixLevel.tree:
 
                         string licenPlaceFirstThreeChars
-                            =  Administrator.listaVehiculos[i].LicensePlate[1].ToString()
-                            +  Administrator.listaVehiculos[i].LicensePlate[2].ToString()
-                            +  Administrator.listaVehiculos[i].LicensePlate[3].ToString();
+                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[3].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstThreeChars)
                         {
