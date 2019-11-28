@@ -63,8 +63,10 @@ namespace ParqueoAdministrator
 
         private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
         {
-            dgvVehiculos.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
-            dgvVehiculos.Refresh();
+            //dgvVehiculos.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
+            //dgvVehiculos.Refresh();
+
+            filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
         }
 
         private void btnClearFilters_Click(object sender, EventArgs e)
@@ -154,6 +156,7 @@ namespace ParqueoAdministrator
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowId = e.RowIndex;
+            labelVehiculos.Text = rowId.ToString();
         }
     }
 }

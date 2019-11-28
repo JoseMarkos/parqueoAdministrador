@@ -1,6 +1,7 @@
 ﻿using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
@@ -34,19 +35,23 @@ namespace ParqueoAdministrator
         }
 
         #endregion
-        public List<Vehicle> ByVehicleType(Vehicle.Vehicletype type)
+        public void ByVehicleType(Vehicle.Vehicletype type, DataGridView dgv)
         {
-            List<Vehicle> list = new List<Vehicle>();
+            DataGridViewRowCollection collection = dgv.Rows;
 
-            foreach (var item in Administrator.listaVehiculos)
+
+            for (int i = 0; i < Administrator.listaVehiculos.Count; i++)
             {
-                if (item.Type == type)
+                int height = collection[i].Height;
+                collection[i].Height = 22;
+
+                if (Administrator.listaVehiculos[i].Type != type)
                 {
-                    list.Add(item);
+                    collection[i].Height = 0;
+
+                    //dgv.Refresh();
                 }
             }
-
-            return list;
         }
 
         public List<Vehicle> ByOwner(string name)
