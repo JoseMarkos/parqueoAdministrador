@@ -179,6 +179,7 @@ namespace ParqueoAdministrator
                 filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
         }
+
         #endregion
     }
 }
