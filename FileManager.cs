@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using proyectoLibrary.Modelos;
+using System.Collections.Generic;
+using System.IO;
+using System.Windows.Forms;
 
 namespace ParqueoAdministrator
 {
@@ -6,7 +9,7 @@ namespace ParqueoAdministrator
     {
         public static int counter = 0;
         private static readonly string currentDirectory = Directory.GetCurrentDirectory();
-        private readonly string ParkingPath = currentDirectory + "//parkings";
+        private readonly string ParkingPath = currentDirectory + "\\parkings";
 
         public FileManager()
         {
@@ -21,17 +24,46 @@ namespace ParqueoAdministrator
                 _ = Directory.CreateDirectory(ParkingPath);
             }
 
-            _ = File.Create(ParkingPath + "//" + name);
+            string filePath = ParkingPath + "\\" + name;
+            MessageBox.Show(filePath);
+            Stream stream = File.Create(filePath);
+            stream.Close();
+        }
+
+        public void WriteParkingFile(string name, List<Vehicle> source)
+        {
+            FileManager fileManager = new FileManager();
+            List<Vehicle> list = source;
+
+            // FileManager.DeleteFile();
+            fileManager.CreateParkingFile(name);
+
+            using (FileStream fileStream = new FileStream(ParkingPath + "\\" + name, FileMode.Open, FileAccess.ReadWrite))
+            {
+                StreamWriter sw = new StreamWriter(fileStream);
+                foreach (var item in list)
+                {
+                    sw.Write(item.Owner is null ? "" : "" + item.Owner);
+                    sw.Write(item.OwnerID is 0 ? ", " : ", " + item.OwnerID);
+                    sw.Write(", " + item.Type);
+                    sw.Write(item.LicensePlate is null ? ", " : ", " + item.LicensePlate);
+                    sw.Write(item.Parking is null ? ", " : ", " + item.Parking);
+
+                    sw.Write("\n");
+                }
+
+                sw.Close();
+                fileStream.Close();
+            }
         }
 
         public void DeleteParkingFile(string name)
         {
-            // create just once
+            // Delete if it exits
             if (_ = File.Exists(ParkingPath + "//" + name))
             {
                 File.Delete(ParkingPath + "//" + name);
             }
-
         }
     }
 }

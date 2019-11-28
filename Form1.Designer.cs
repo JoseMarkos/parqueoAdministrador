@@ -38,9 +38,11 @@
             this.panelData = new System.Windows.Forms.Panel();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnVehicle = new System.Windows.Forms.Button();
             this.btnParqueos = new System.Windows.Forms.Button();
             this.panelHead = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnGetOut = new System.Windows.Forms.Button();
             this.labelVehiculos = new System.Windows.Forms.Label();
             this.btnClearFilters = new System.Windows.Forms.Button();
             this.comboVehicleType = new System.Windows.Forms.ComboBox();
@@ -55,15 +57,14 @@
             this.radio1 = new System.Windows.Forms.RadioButton();
             this.txtName = new System.Windows.Forms.TextBox();
             this.splitParking = new System.Windows.Forms.SplitContainer();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnVehiculos2 = new System.Windows.Forms.Button();
+            this.btnParqueos2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.labelParqueos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvParqueos = new System.Windows.Forms.DataGridView();
-            this.btnVehicle = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVehiculos2 = new System.Windows.Forms.Button();
-            this.btnParqueos2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -85,13 +86,13 @@
             this.splitParking.Panel1.SuspendLayout();
             this.splitParking.Panel2.SuspendLayout();
             this.splitParking.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParqueos)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvVehiculos
@@ -138,6 +139,7 @@
             this.dgvVehiculos.RowHeadersVisible = false;
             this.dgvVehiculos.Size = new System.Drawing.Size(655, 380);
             this.dgvVehiculos.TabIndex = 0;
+            this.dgvVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculos_CellClick);
             // 
             // panelData
             // 
@@ -180,6 +182,26 @@
             this.panelMenu.Size = new System.Drawing.Size(238, 517);
             this.panelMenu.TabIndex = 4;
             // 
+            // btnVehicle
+            // 
+            this.btnVehicle.BackColor = System.Drawing.Color.Transparent;
+            this.btnVehicle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVehicle.FlatAppearance.BorderSize = 0;
+            this.btnVehicle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnVehicle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehicle.ForeColor = System.Drawing.Color.White;
+            this.btnVehicle.Location = new System.Drawing.Point(0, 43);
+            this.btnVehicle.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnVehicle.Name = "btnVehicle";
+            this.btnVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnVehicle.Size = new System.Drawing.Size(238, 43);
+            this.btnVehicle.TabIndex = 4;
+            this.btnVehicle.Text = "Vehiculos";
+            this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehicle.UseVisualStyleBackColor = false;
+            this.btnVehicle.Click += new System.EventHandler(this.Vehiculos_Click);
+            // 
             // btnParqueos
             // 
             this.btnParqueos.BackColor = System.Drawing.Color.Transparent;
@@ -220,6 +242,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.btnGetOut);
             this.splitContainer2.Panel1.Controls.Add(this.labelVehiculos);
             // 
             // splitContainer2.Panel2
@@ -231,6 +254,20 @@
             this.splitContainer2.Size = new System.Drawing.Size(655, 77);
             this.splitContainer2.SplitterDistance = 38;
             this.splitContainer2.TabIndex = 4;
+            // 
+            // btnGetOut
+            // 
+            this.btnGetOut.BackColor = System.Drawing.Color.Red;
+            this.btnGetOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetOut.ForeColor = System.Drawing.Color.White;
+            this.btnGetOut.Location = new System.Drawing.Point(554, 12);
+            this.btnGetOut.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnGetOut.Name = "btnGetOut";
+            this.btnGetOut.Size = new System.Drawing.Size(98, 23);
+            this.btnGetOut.TabIndex = 4;
+            this.btnGetOut.Text = "Get out";
+            this.btnGetOut.UseVisualStyleBackColor = false;
+            this.btnGetOut.Click += new System.EventHandler(this.btnGetOut_Click);
             // 
             // labelVehiculos
             // 
@@ -247,7 +284,7 @@
             this.btnClearFilters.BackColor = System.Drawing.Color.Black;
             this.btnClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilters.ForeColor = System.Drawing.Color.White;
-            this.btnClearFilters.Location = new System.Drawing.Point(479, 5);
+            this.btnClearFilters.Location = new System.Drawing.Point(554, 7);
             this.btnClearFilters.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
             this.btnClearFilters.Name = "btnClearFilters";
             this.btnClearFilters.Size = new System.Drawing.Size(98, 23);
@@ -393,6 +430,56 @@
             this.splitParking.SplitterDistance = 238;
             this.splitParking.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnVehiculos2);
+            this.panel4.Controls.Add(this.btnParqueos2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(238, 517);
+            this.panel4.TabIndex = 5;
+            // 
+            // btnVehiculos2
+            // 
+            this.btnVehiculos2.BackColor = System.Drawing.Color.Transparent;
+            this.btnVehiculos2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVehiculos2.FlatAppearance.BorderSize = 0;
+            this.btnVehiculos2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnVehiculos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnVehiculos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehiculos2.ForeColor = System.Drawing.Color.White;
+            this.btnVehiculos2.Location = new System.Drawing.Point(0, 43);
+            this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnVehiculos2.Name = "btnVehiculos2";
+            this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnVehiculos2.Size = new System.Drawing.Size(238, 43);
+            this.btnVehiculos2.TabIndex = 4;
+            this.btnVehiculos2.Text = "Vehiculos";
+            this.btnVehiculos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehiculos2.UseVisualStyleBackColor = false;
+            this.btnVehiculos2.Click += new System.EventHandler(this.btnVehiculos2_Click);
+            // 
+            // btnParqueos2
+            // 
+            this.btnParqueos2.BackColor = System.Drawing.Color.Transparent;
+            this.btnParqueos2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnParqueos2.FlatAppearance.BorderSize = 0;
+            this.btnParqueos2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnParqueos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
+            this.btnParqueos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParqueos2.ForeColor = System.Drawing.Color.White;
+            this.btnParqueos2.Location = new System.Drawing.Point(0, 0);
+            this.btnParqueos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnParqueos2.Name = "btnParqueos2";
+            this.btnParqueos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnParqueos2.Size = new System.Drawing.Size(238, 43);
+            this.btnParqueos2.TabIndex = 3;
+            this.btnParqueos2.Text = "Parqueos";
+            this.btnParqueos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParqueos2.UseVisualStyleBackColor = false;
+            this.btnParqueos2.Click += new System.EventHandler(this.btnParqueos2_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -484,76 +571,6 @@
             this.dgvParqueos.Size = new System.Drawing.Size(655, 380);
             this.dgvParqueos.TabIndex = 0;
             // 
-            // btnVehicle
-            // 
-            this.btnVehicle.BackColor = System.Drawing.Color.Transparent;
-            this.btnVehicle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVehicle.FlatAppearance.BorderSize = 0;
-            this.btnVehicle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnVehicle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVehicle.ForeColor = System.Drawing.Color.White;
-            this.btnVehicle.Location = new System.Drawing.Point(0, 43);
-            this.btnVehicle.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnVehicle.Name = "btnVehicle";
-            this.btnVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehicle.Size = new System.Drawing.Size(238, 43);
-            this.btnVehicle.TabIndex = 4;
-            this.btnVehicle.Text = "Vehiculos";
-            this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehicle.UseVisualStyleBackColor = false;
-            this.btnVehicle.Click += new System.EventHandler(this.Vehiculos_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnVehiculos2);
-            this.panel4.Controls.Add(this.btnParqueos2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 517);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnVehiculos2
-            // 
-            this.btnVehiculos2.BackColor = System.Drawing.Color.Transparent;
-            this.btnVehiculos2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVehiculos2.FlatAppearance.BorderSize = 0;
-            this.btnVehiculos2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnVehiculos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnVehiculos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVehiculos2.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos2.Location = new System.Drawing.Point(0, 43);
-            this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnVehiculos2.Name = "btnVehiculos2";
-            this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehiculos2.Size = new System.Drawing.Size(238, 43);
-            this.btnVehiculos2.TabIndex = 4;
-            this.btnVehiculos2.Text = "Vehiculos";
-            this.btnVehiculos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVehiculos2.UseVisualStyleBackColor = false;
-            this.btnVehiculos2.Click += new System.EventHandler(this.btnVehiculos2_Click);
-            // 
-            // btnParqueos2
-            // 
-            this.btnParqueos2.BackColor = System.Drawing.Color.Transparent;
-            this.btnParqueos2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnParqueos2.FlatAppearance.BorderSize = 0;
-            this.btnParqueos2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnParqueos2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
-            this.btnParqueos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParqueos2.ForeColor = System.Drawing.Color.White;
-            this.btnParqueos2.Location = new System.Drawing.Point(0, 0);
-            this.btnParqueos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnParqueos2.Name = "btnParqueos2";
-            this.btnParqueos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnParqueos2.Size = new System.Drawing.Size(238, 43);
-            this.btnParqueos2.TabIndex = 3;
-            this.btnParqueos2.Text = "Parqueos";
-            this.btnParqueos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParqueos2.UseVisualStyleBackColor = false;
-            this.btnParqueos2.Click += new System.EventHandler(this.btnParqueos2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,6 +607,7 @@
             this.splitParking.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitParking)).EndInit();
             this.splitParking.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
@@ -597,7 +615,6 @@
             this.splitContainer4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParqueos)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -636,6 +653,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnVehiculos2;
         private System.Windows.Forms.Button btnParqueos2;
+        private System.Windows.Forms.Button btnGetOut;
     }
 }
 

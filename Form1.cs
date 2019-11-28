@@ -11,6 +11,7 @@ namespace ParqueoAdministrator
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
         private Filter filter = new Filter();
         private FileRead fileRead = new FileRead();
+        private int rowId;
 
         public Form1()
         {
@@ -52,13 +53,6 @@ namespace ParqueoAdministrator
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
-
-            //
-
-            //radio1.Text = Parking.ParkingQuadrant.NorthEast.ToString();
-            //radio2.Text = Parking.ParkingQuadrant.NorthWest.ToString();
-            //radio3.Text = Parking.ParkingQuadrant.SouthEast.ToString();
-            //radio4.Text = Parking.ParkingQuadrant.SouthWest.ToString();
         }
 
         private void txtFilterOwner_TextChanged(object sender, EventArgs e)
@@ -145,6 +139,21 @@ namespace ParqueoAdministrator
         private void Vehiculos_Click(object sender, EventArgs e)
         {
             SelectVehiclePanel();
+        }
+
+        private void btnGetOut_Click(object sender, EventArgs e)
+        {
+            listaVehiculos.RemoveAt(rowId);
+            initDataGridViewSource();
+
+            FileManager fileMaganer = new FileManager();
+            fileMaganer.CreateParkingFile("hoy.txt");
+            fileMaganer.WriteParkingFile("hoy.txt", listaVehiculos);
+        }
+
+        private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowId = e.RowIndex;
         }
     }
 }
