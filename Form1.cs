@@ -133,6 +133,11 @@ namespace ParqueoAdministrator
             {
                 filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
+
+            if (txtFilterOwner.Text != "")
+            {
+                filter.ByOwner(txtFilterOwner.Text, dgvVehiculos);
+            }
         }
 
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
