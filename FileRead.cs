@@ -51,6 +51,11 @@ namespace ParqueoAdministrator
 
         public List<Parking> ReadParkingFile()
         {
+            if (listParkings.Count > 0)
+            {
+                return listParkings;
+            }
+
             string line;
             StreamReader streamReader = new StreamReader(PathParking);
 
@@ -79,16 +84,6 @@ namespace ParqueoAdministrator
                 
                 byte.TryParse(lineArray[3], out _normal);
                 byte.TryParse(lineArray[4], out _big);
-
-                //if (Normal * _normal == 0)
-                //{
-                //    _normal = 0;
-                //}
-
-                //if (Big * _big == 0)
-                //{
-                //    _big = 0;
-                //}
 
                 Parking parking = new Parking(_name, _parkingQuadrant, _services, _normal, _big);
 

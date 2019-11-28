@@ -10,6 +10,8 @@ namespace ParqueoAdministrator
         public static List<Parking> ListaParqueos = new List<Parking>();
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
         private Filter filter = new Filter();
+        private FileRead fileRead = new FileRead();
+
         public Form1()
         {
             InitializeComponent();
@@ -17,16 +19,12 @@ namespace ParqueoAdministrator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // open default file
+            // open default Vehicle file
 
-            FileManager fileManager = new FileManager();
-
-            FileRead fileRead = new FileRead();
             fileRead.PathVehicle = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\default.txt";
-            fileRead.PathParking = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\parkingList.txt";
 
             listaVehiculos = fileRead.ReadVehicleFile();
-            
+
             initDataGridViewSource();
 
             // Adding options to comboVehicleType filter
@@ -54,11 +52,6 @@ namespace ParqueoAdministrator
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
             comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
-
-            // Adding parkings to the listVehicles
-
-            ListaParqueos = fileRead.ReadParkingFile();
-            initDataGridViewSource(ListaParqueos);
 
             //
 
@@ -115,6 +108,43 @@ namespace ParqueoAdministrator
 
             dgvVehiculos.DataSource = filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem);
             dgvVehiculos.Refresh();
+        }
+
+        private void SelectVehiclePanel()
+        {
+            splitParking.Hide();
+            splitMain.Show();
+        }
+
+        private void SelectParkingPanel()
+        {
+            fileRead.PathParking = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\parkingList.txt";
+
+            ListaParqueos = fileRead.ReadParkingFile();
+            initDataGridViewSource(ListaParqueos);
+
+            splitMain.Hide();
+            splitParking.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectParkingPanel();
+        }
+
+        private void btnParqueos2_Click(object sender, EventArgs e)
+        {
+            SelectParkingPanel();
+        }
+
+        private void btnVehiculos2_Click(object sender, EventArgs e)
+        {
+            SelectVehiclePanel();
+        }
+
+        private void Vehiculos_Click(object sender, EventArgs e)
+        {
+            SelectVehiclePanel();
         }
     }
 }
