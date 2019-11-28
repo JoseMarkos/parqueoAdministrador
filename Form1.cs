@@ -133,12 +133,16 @@ namespace ParqueoAdministrator
             {
                 filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
+
+            if (txtFilterOwner.Text != "")
+            {
+                filter.ByOwner(txtFilterOwner.Text, dgvVehiculos);
+            }
         }
 
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rowId = e.RowIndex;
-            labelVehiculos.Text = rowId.ToString();
         }
 
         #region Filter
@@ -158,7 +162,7 @@ namespace ParqueoAdministrator
         private void btnClearFilters_Click(object sender, EventArgs e)
         {
             txtFilterOwner.Text = "";
-            
+
             comboVehicleType.SelectedItem = null;
             comboVehicleType.Text = "Type";
 
@@ -175,6 +179,7 @@ namespace ParqueoAdministrator
                 filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
         }
+
         #endregion
     }
 }
