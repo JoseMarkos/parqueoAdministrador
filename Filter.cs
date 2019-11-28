@@ -38,18 +38,15 @@ namespace ParqueoAdministrator
         public void ByVehicleType(Vehicle.Vehicletype type, DataGridView dgv)
         {
             DataGridViewRowCollection collection = dgv.Rows;
-
+            dgv.CurrentCell = null;
 
             for (int i = 0; i < Administrator.listaVehiculos.Count; i++)
             {
-                int height = collection[i].Height;
-                collection[i].Height = 22;
+                collection[i].Visible = true;
 
                 if (Administrator.listaVehiculos[i].Type != type)
                 {
-                    collection[i].Height = 0;
-
-                    //dgv.Refresh();
+                    collection[i].Visible = false;
                 }
             }
         }

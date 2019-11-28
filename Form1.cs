@@ -63,17 +63,20 @@ namespace ParqueoAdministrator
 
         private void comboVehicleType_SelectedValueChanged(object sender, EventArgs e)
         {
-            //dgvVehiculos.DataSource = filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem);
-            //dgvVehiculos.Refresh();
-
-            filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
+            if (comboVehicleType.SelectedItem != null)
+            {
+                filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
+            }
         }
 
         private void btnClearFilters_Click(object sender, EventArgs e)
         {
             txtFilterOwner.Text = string.Empty;
             comboVehicleType.Text = "Type";
+            comboVehicleType.SelectedItem = null;
             comboTypeLicensePlate.Text = "License Plate Type";
+            comboTypeLicensePlate.SelectedItem = null;
+
             initDataGridViewSource();
         }
 
@@ -86,6 +89,7 @@ namespace ParqueoAdministrator
 
             dgvVehiculos.DataSource = bindingSource;
             dgvVehiculos.Refresh();
+            dgvParqueos.CurrentCell = null;
         }
 
         private void initDataGridViewSource(List<Parking> list)
@@ -97,6 +101,7 @@ namespace ParqueoAdministrator
 
             dgvParqueos.DataSource = bindingSource;
             dgvParqueos.Refresh();
+            dgvParqueos.CurrentCell = null;
         }
 
         private void comboTypeLicensePlate_SelectedValueChanged(object sender, EventArgs e)
@@ -145,12 +150,16 @@ namespace ParqueoAdministrator
 
         private void btnGetOut_Click(object sender, EventArgs e)
         {
-            listaVehiculos.RemoveAt(rowId);
-            initDataGridViewSource();
+            dgvVehiculos.Rows.RemoveAt(rowId);
 
             FileManager fileMaganer = new FileManager();
             fileMaganer.CreateParkingFile("hoy.txt");
             fileMaganer.WriteParkingFile("hoy.txt", listaVehiculos);
+
+            if (comboVehicleType.SelectedItem != null)
+            {
+                filter.ByVehicleType((Vehicle.Vehicletype)comboVehicleType.SelectedItem, dgvVehiculos);
+            }
         }
 
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
