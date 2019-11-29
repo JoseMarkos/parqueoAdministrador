@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileManager.cs" />
     <Compile Include="FileRead.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="Form1.cs">

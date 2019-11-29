@@ -28,12 +28,14 @@ namespace ParqueoAdministrator
 
                 _owner = lineArray[0] is null ? "" : lineArray[0];
 
+                // ownerID
                 byte.TryParse(lineArray[1], out _ownerID);
 
                 if (OwnderIDInt * _ownerID == 0)
                 {
                     _ownerID = 0;
                 }
+                // end ownerID
 
                 _type = (Vehicle.Vehicletype)int.Parse(lineArray[2]);
                 _licensePlate = lineArray[0] is null ? "" : lineArray[3];
