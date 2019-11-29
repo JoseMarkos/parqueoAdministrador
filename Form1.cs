@@ -109,7 +109,15 @@ namespace ParqueoAdministrator
             {
                 fileRead.PathParking = CurrentParkingFile;
 
-                ListaParqueos = fileRead.ReadParkingFile();
+                try
+                {
+                    ListaParqueos = fileRead.ReadParkingFile();
+                }
+                catch (Exception ex)
+                {
+                    labelNotification2.Text = ex.Message;
+                }
+
                 initDataGridViewSource(ListaParqueos);
             }
             else
@@ -232,7 +240,14 @@ namespace ParqueoAdministrator
                     fileRead.PathVehicle = filePath;
 
                     listaVehiculos.Clear();
-                    listaVehiculos = fileRead.ReadVehicleFile();
+
+                    try {
+                        listaVehiculos = fileRead.ReadVehicleFile();
+                    }
+                    catch (Exception ex)
+                    {
+                        labelNotification.Text = ex.Message;
+                    }
 
                     initDataGridViewSource();
                 }
@@ -263,7 +278,6 @@ namespace ParqueoAdministrator
                     try
                     {
                         ListaParqueos = fileRead.ReadParkingFile();
-
                     }
                     catch (Exception ex)
                     {
