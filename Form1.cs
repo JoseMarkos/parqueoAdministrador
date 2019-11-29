@@ -1,6 +1,7 @@
 ﻿using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ParqueoAdministrator
@@ -12,6 +13,7 @@ namespace ParqueoAdministrator
         private Filter filter = new Filter();
         private FileRead fileRead = new FileRead();
         private int rowId;
+        private OpenFileDialog openFileDialog;
 
         public Administrator()
         {
@@ -121,8 +123,9 @@ namespace ParqueoAdministrator
             dgvVehiculos.Rows.RemoveAt(rowId);
 
             FileManager fileMaganer = new FileManager();
-            fileMaganer.CreateParkingFile("hoy.txt");
-            fileMaganer.WriteParkingFile("hoy.txt", listaVehiculos);
+
+            fileMaganer.DeleteParkingFile(fileRead.PathVehicle);
+            fileMaganer.WriteParkingFile(fileRead.PathVehicle, listaVehiculos);
 
             if (comboVehicleType.SelectedItem != null)
             {
@@ -181,5 +184,57 @@ namespace ParqueoAdministrator
         }
 
         #endregion
+
+        private void btnOpenVehiclesFile_Click(object sender, EventArgs e)
+        {
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    fileRead.PathVehicle = filePath;
+
+                    listaVehiculos.Clear();
+                    listaVehiculos = fileRead.ReadVehicleFile();
+
+                    initDataGridViewSource();
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    fileRead.PathParking = filePath;
+
+                    ListaParqueos.Clear();
+                    ListaParqueos = fileRead.ReadParkingFile();
+
+                    initDataGridViewSource(ListaParqueos);
+                }
+            }
+        }
     }
 }

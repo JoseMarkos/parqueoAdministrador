@@ -15,29 +15,28 @@ namespace ParqueoAdministrator
             counter++;
         }
 
-        public void CreateParkingFile(string name)
+        public void CreateParkingFile(string path)
         {
             // create just once
-            if (counter < 2)
-            {
-                _ = Directory.CreateDirectory(ParkingPath);
-            }
+            //if (counter < 2)
+            //{
+            //    _ = Directory.CreateDirectory(ParkingPath);
+            //}
 
-            string filePath = ParkingPath + "\\" + name;
+            string filePath = path;
 
             Stream stream = File.Create(filePath);
             stream.Close();
         }
 
-        public void WriteParkingFile(string name, List<Vehicle> source)
+        public void WriteParkingFile(string path, List<Vehicle> source)
         {
             FileManager fileManager = new FileManager();
             List<Vehicle> list = source;
 
-            // FileManager.DeleteFile();
-            fileManager.CreateParkingFile(name);
+            fileManager.CreateParkingFile(path);
 
-            using (FileStream fileStream = new FileStream(ParkingPath + "\\" + name, FileMode.Open, FileAccess.ReadWrite))
+            using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
             {
                 StreamWriter sw = new StreamWriter(fileStream);
                 foreach (var item in list)
@@ -56,12 +55,12 @@ namespace ParqueoAdministrator
             }
         }
 
-        public void DeleteParkingFile(string name)
+        public void DeleteParkingFile(string path)
         {
             // Delete if it exits
-            if (_ = File.Exists(ParkingPath + "//" + name))
+            if (_ = File.Exists(path))
             {
-                File.Delete(ParkingPath + "//" + name);
+                File.Delete(path);
             }
         }
     }
