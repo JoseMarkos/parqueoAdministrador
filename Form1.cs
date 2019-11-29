@@ -21,7 +21,7 @@ namespace ParqueoAdministrator
         private static string CurrentVehiclesDirectory = Directory.GetCurrentDirectory() + "\\vehicles\\" + Year + "\\" + Month;
         private static string CurrentParkingsDirectory = Directory.GetCurrentDirectory() + "\\parkings\\" + Year + "\\" + Month;
         private static string CurrentVehiclesFile = CurrentVehiclesDirectory + "\\" + Day + ".txt";
-        private static string CurrentParkingFile = CurrentVehiclesDirectory + "\\" + Day + ".txt";
+        private static string CurrentParkingFile = CurrentParkingsDirectory + "\\" + Day + ".txt";
 
         public Administrator()
         {
