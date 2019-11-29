@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVehiculos = new System.Windows.Forms.DataGridView();
             this.panelData = new System.Windows.Forms.Panel();
             this.splitMain = new System.Windows.Forms.SplitContainer();
@@ -65,9 +65,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.labelParqueos = new System.Windows.Forms.Label();
+            this.btnImportParkingFile = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvParqueos = new System.Windows.Forms.DataGridView();
-            this.btnImportParkingFile = new System.Windows.Forms.Button();
+            this.labelNotification = new System.Windows.Forms.Label();
+            this.labelNotification2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -111,23 +113,23 @@
             this.dgvVehiculos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVehiculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVehiculos.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVehiculos.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVehiculos.GridColor = System.Drawing.SystemColors.Control;
             this.dgvVehiculos.Location = new System.Drawing.Point(15, 15);
@@ -136,14 +138,14 @@
             this.dgvVehiculos.ReadOnly = true;
             this.dgvVehiculos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvVehiculos.RowHeadersVisible = false;
             this.dgvVehiculos.Size = new System.Drawing.Size(574, 335);
             this.dgvVehiculos.TabIndex = 0;
@@ -270,6 +272,7 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.labelNotification);
             this.splitContainer3.Panel1.Controls.Add(this.labelVehiculos);
             // 
             // splitContainer3.Panel2
@@ -545,6 +548,7 @@
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.labelNotification2);
             this.splitContainer4.Panel1.Controls.Add(this.labelParqueos);
             // 
             // splitContainer4.Panel2
@@ -565,6 +569,22 @@
             this.labelParqueos.TabIndex = 0;
             this.labelParqueos.Text = "Parqueos";
             // 
+            // btnImportParkingFile
+            // 
+            this.btnImportParkingFile.BackColor = System.Drawing.Color.Black;
+            this.btnImportParkingFile.FlatAppearance.BorderSize = 0;
+            this.btnImportParkingFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportParkingFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportParkingFile.ForeColor = System.Drawing.Color.White;
+            this.btnImportParkingFile.Location = new System.Drawing.Point(15, 18);
+            this.btnImportParkingFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnImportParkingFile.Name = "btnImportParkingFile";
+            this.btnImportParkingFile.Size = new System.Drawing.Size(98, 23);
+            this.btnImportParkingFile.TabIndex = 5;
+            this.btnImportParkingFile.Text = "Import";
+            this.btnImportParkingFile.UseVisualStyleBackColor = false;
+            this.btnImportParkingFile.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -584,23 +604,23 @@
             this.dgvParqueos.BackgroundColor = System.Drawing.Color.White;
             this.dgvParqueos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvParqueos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParqueos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParqueos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvParqueos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvParqueos.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvParqueos.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvParqueos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvParqueos.GridColor = System.Drawing.SystemColors.Control;
             this.dgvParqueos.Location = new System.Drawing.Point(15, 15);
@@ -609,33 +629,37 @@
             this.dgvParqueos.ReadOnly = true;
             this.dgvParqueos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvParqueos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvParqueos.RowHeadersVisible = false;
             this.dgvParqueos.Size = new System.Drawing.Size(574, 372);
             this.dgvParqueos.TabIndex = 0;
             // 
-            // btnImportParkingFile
+            // labelNotification
             // 
-            this.btnImportParkingFile.BackColor = System.Drawing.Color.Black;
-            this.btnImportParkingFile.FlatAppearance.BorderSize = 0;
-            this.btnImportParkingFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportParkingFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportParkingFile.ForeColor = System.Drawing.Color.White;
-            this.btnImportParkingFile.Location = new System.Drawing.Point(15, 18);
-            this.btnImportParkingFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnImportParkingFile.Name = "btnImportParkingFile";
-            this.btnImportParkingFile.Size = new System.Drawing.Size(98, 23);
-            this.btnImportParkingFile.TabIndex = 5;
-            this.btnImportParkingFile.Text = "Import";
-            this.btnImportParkingFile.UseVisualStyleBackColor = false;
-            this.btnImportParkingFile.Click += new System.EventHandler(this.button1_Click_1);
+            this.labelNotification.AutoSize = true;
+            this.labelNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotification.ForeColor = System.Drawing.Color.OliveDrab;
+            this.labelNotification.Location = new System.Drawing.Point(268, 19);
+            this.labelNotification.Name = "labelNotification";
+            this.labelNotification.Size = new System.Drawing.Size(0, 16);
+            this.labelNotification.TabIndex = 1;
+            // 
+            // labelNotification2
+            // 
+            this.labelNotification2.AutoSize = true;
+            this.labelNotification2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotification2.ForeColor = System.Drawing.Color.OliveDrab;
+            this.labelNotification2.Location = new System.Drawing.Point(251, 15);
+            this.labelNotification2.Name = "labelNotification2";
+            this.labelNotification2.Size = new System.Drawing.Size(0, 16);
+            this.labelNotification2.TabIndex = 2;
             // 
             // Administrator
             // 
@@ -728,6 +752,8 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnOpenVehiclesFile;
         private System.Windows.Forms.Button btnImportParkingFile;
+        private System.Windows.Forms.Label labelNotification;
+        private System.Windows.Forms.Label labelNotification2;
     }
 }
 
