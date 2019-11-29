@@ -15,6 +15,14 @@ namespace ParqueoAdministrator
         private int rowId;
         private OpenFileDialog openFileDialog;
 
+        private static string Year = DateTime.Now.Year.ToString();
+        private static string Month = DateTime.Now.Month.ToString();
+        private static string Day = DateTime.Now.Day.ToString();
+        private static string CurrentVehiclesDirectory = Directory.GetCurrentDirectory() + "\\vehicles\\" + Year + "\\" + Month;
+        private static string CurrentParkingsDirectory = Directory.GetCurrentDirectory() + "\\parkings\\" + Year + "\\" + Month;
+        private static string CurrentVehiclesFile = CurrentVehiclesDirectory + "\\" + Day + ".txt";
+        private static string CurrentParkingFile = CurrentVehiclesDirectory + "\\" + Day + ".txt";
+
         public Administrator()
         {
             InitializeComponent();
@@ -22,13 +30,21 @@ namespace ParqueoAdministrator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // open default Vehicle file
+            // open current day Vehicle file
+          
+            if (File.Exists(CurrentVehiclesFile))
+            {
+                fileRead.PathVehicle = CurrentVehiclesFile;
 
-            fileRead.PathVehicle = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\default.txt";
+                listaVehiculos = fileRead.ReadVehicleFile();
 
-            listaVehiculos = fileRead.ReadVehicleFile();
+                initDataGridViewSource();
+            }
 
-            initDataGridViewSource();
+            else
+            {
+                labelNotification.Text = "Oh, there is not a vehicles file today. Try import instead.";
+            }
 
             // Adding options to comboVehicleType filter
 
@@ -89,10 +105,20 @@ namespace ParqueoAdministrator
 
         private void SelectParkingPanel()
         {
-            fileRead.PathParking = @"C:\Users\Core\Documents\UDEO\2019 T4\Progra IB\Proyecto\parkingList.txt";
+            if (File.Exists(CurrentParkingFile))
+            {
+                fileRead.PathParking = CurrentParkingFile;
 
-            ListaParqueos = fileRead.ReadParkingFile();
-            initDataGridViewSource(ListaParqueos);
+                ListaParqueos = fileRead.ReadParkingFile();
+                initDataGridViewSource(ListaParqueos);
+            }
+            else
+            {
+                if (ListaParqueos.Count < 1)
+                {
+                    labelNotification2.Text = "Oh, there is not a parking file today. Try import instead.";
+                }
+            }
 
             splitMain.Hide();
             splitParking.Show();
@@ -187,6 +213,8 @@ namespace ParqueoAdministrator
 
         private void btnOpenVehiclesFile_Click(object sender, EventArgs e)
         {
+            labelNotification.Text = "";
+
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -213,6 +241,7 @@ namespace ParqueoAdministrator
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            labelNotification2.Text = "";
             var filePath = string.Empty;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -230,7 +259,16 @@ namespace ParqueoAdministrator
                     fileRead.PathParking = filePath;
 
                     ListaParqueos.Clear();
-                    ListaParqueos = fileRead.ReadParkingFile();
+
+                    try
+                    {
+                        ListaParqueos = fileRead.ReadParkingFile();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        labelNotification2.Text = ex.Message;
+                    }
 
                     initDataGridViewSource(ListaParqueos);
                 }
