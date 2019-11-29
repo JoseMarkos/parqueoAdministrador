@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using static proyectoLibrary.Modelos.Vehicle;
 
 namespace ParqueoAdministrator
 {
@@ -57,20 +58,20 @@ namespace ParqueoAdministrator
 
             // Adding options to comboTypeLicensePlate filter
 
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.A);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.C);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CD);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.DIS);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.E);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.EXT);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.M);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.MI);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.O);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.P);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.A);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.C);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.CC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.CD);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.DIS);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.E);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.EXT);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.M);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.MI);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.O);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.P);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.TC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.TRC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.U);
         }
 
         private void initDataGridViewSource()
@@ -168,7 +169,7 @@ namespace ParqueoAdministrator
 
             if (comboTypeLicensePlate.SelectedItem != null)
             {
-                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+                filter.ByLisencePlate((licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
 
             if (txtFilterOwner.Text != "")
@@ -213,7 +214,7 @@ namespace ParqueoAdministrator
         {
             if (comboTypeLicensePlate.SelectedItem != null)
             {
-                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+                filter.ByLisencePlate((licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
         }
 

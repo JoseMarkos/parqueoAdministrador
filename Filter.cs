@@ -2,39 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static proyectoLibrary.Modelos.Vehicle;
 
 namespace ParqueoAdministrator
 {
     public sealed class Filter
     {
-        #region Enums
-
-        public enum licensePlatePrefix
-        {
-            A,
-            C,
-            CC,
-            CD,
-            DIS,
-            E,
-            EXT,
-            M,
-            MI,
-            O,
-            P,
-            TC,
-            TRC,
-            U
-        }
-
-        public enum licensePlatePrefixLevel
-        {
-            one = 1,
-            two = 2,
-            tree = 3
-        }
-
-        #endregion
         public void ByVehicleType(Vehicle.Vehicletype type, DataGridView dgv)
         {
             DataGridViewRowCollection collection = dgv.Rows;
