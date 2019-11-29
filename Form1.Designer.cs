@@ -44,6 +44,7 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.labelVehiculos = new System.Windows.Forms.Label();
+            this.btnOpenVehiclesFile = new System.Windows.Forms.Button();
             this.btnGetOut = new System.Windows.Forms.Button();
             this.btnClearFilters = new System.Windows.Forms.Button();
             this.comboVehicleType = new System.Windows.Forms.ComboBox();
@@ -66,7 +67,7 @@
             this.labelParqueos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvParqueos = new System.Windows.Forms.DataGridView();
-            this.btnOpenVehiclesFile = new System.Windows.Forms.Button();
+            this.btnImportParkingFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).BeginInit();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
@@ -96,6 +97,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParqueos)).BeginInit();
@@ -288,6 +290,22 @@
             this.labelVehiculos.Size = new System.Drawing.Size(103, 24);
             this.labelVehiculos.TabIndex = 0;
             this.labelVehiculos.Text = "Vehiculos";
+            // 
+            // btnOpenVehiclesFile
+            // 
+            this.btnOpenVehiclesFile.BackColor = System.Drawing.Color.Black;
+            this.btnOpenVehiclesFile.FlatAppearance.BorderSize = 0;
+            this.btnOpenVehiclesFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenVehiclesFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenVehiclesFile.ForeColor = System.Drawing.Color.White;
+            this.btnOpenVehiclesFile.Location = new System.Drawing.Point(158, 14);
+            this.btnOpenVehiclesFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnOpenVehiclesFile.Name = "btnOpenVehiclesFile";
+            this.btnOpenVehiclesFile.Size = new System.Drawing.Size(98, 23);
+            this.btnOpenVehiclesFile.TabIndex = 4;
+            this.btnOpenVehiclesFile.Text = "Import";
+            this.btnOpenVehiclesFile.UseVisualStyleBackColor = false;
+            this.btnOpenVehiclesFile.Click += new System.EventHandler(this.btnOpenVehiclesFile_Click);
             // 
             // btnGetOut
             // 
@@ -515,29 +533,33 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(15);
-            this.panel1.Size = new System.Drawing.Size(604, 86);
+            this.panel1.Size = new System.Drawing.Size(604, 115);
             this.panel1.TabIndex = 2;
             // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(15, 15);
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.Controls.Add(this.labelParqueos);
-            this.splitContainer4.Size = new System.Drawing.Size(574, 56);
-            this.splitContainer4.SplitterDistance = 27;
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer4.Panel2.Controls.Add(this.btnImportParkingFile);
+            this.splitContainer4.Size = new System.Drawing.Size(604, 115);
+            this.splitContainer4.SplitterDistance = 55;
             this.splitContainer4.TabIndex = 4;
             // 
             // labelParqueos
             // 
             this.labelParqueos.AutoSize = true;
             this.labelParqueos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParqueos.Location = new System.Drawing.Point(3, 0);
+            this.labelParqueos.Location = new System.Drawing.Point(11, 9);
             this.labelParqueos.Name = "labelParqueos";
             this.labelParqueos.Size = new System.Drawing.Size(99, 24);
             this.labelParqueos.TabIndex = 0;
@@ -548,10 +570,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dgvParqueos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
+            this.panel2.Location = new System.Drawing.Point(0, 115);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(604, 431);
+            this.panel2.Size = new System.Drawing.Size(604, 402);
             this.panel2.TabIndex = 1;
             // 
             // dgvParqueos
@@ -596,24 +618,24 @@
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvParqueos.RowHeadersVisible = false;
-            this.dgvParqueos.Size = new System.Drawing.Size(574, 401);
+            this.dgvParqueos.Size = new System.Drawing.Size(574, 372);
             this.dgvParqueos.TabIndex = 0;
             // 
-            // btnOpenVehiclesFile
+            // btnImportParkingFile
             // 
-            this.btnOpenVehiclesFile.BackColor = System.Drawing.Color.Black;
-            this.btnOpenVehiclesFile.FlatAppearance.BorderSize = 0;
-            this.btnOpenVehiclesFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenVehiclesFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenVehiclesFile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenVehiclesFile.Location = new System.Drawing.Point(158, 14);
-            this.btnOpenVehiclesFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.btnOpenVehiclesFile.Name = "btnOpenVehiclesFile";
-            this.btnOpenVehiclesFile.Size = new System.Drawing.Size(98, 23);
-            this.btnOpenVehiclesFile.TabIndex = 4;
-            this.btnOpenVehiclesFile.Text = "Import";
-            this.btnOpenVehiclesFile.UseVisualStyleBackColor = false;
-            this.btnOpenVehiclesFile.Click += new System.EventHandler(this.btnOpenVehiclesFile_Click);
+            this.btnImportParkingFile.BackColor = System.Drawing.Color.Black;
+            this.btnImportParkingFile.FlatAppearance.BorderSize = 0;
+            this.btnImportParkingFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportParkingFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportParkingFile.ForeColor = System.Drawing.Color.White;
+            this.btnImportParkingFile.Location = new System.Drawing.Point(15, 18);
+            this.btnImportParkingFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnImportParkingFile.Name = "btnImportParkingFile";
+            this.btnImportParkingFile.Size = new System.Drawing.Size(98, 23);
+            this.btnImportParkingFile.TabIndex = 5;
+            this.btnImportParkingFile.Text = "Import";
+            this.btnImportParkingFile.UseVisualStyleBackColor = false;
+            this.btnImportParkingFile.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Administrator
             // 
@@ -659,6 +681,7 @@
             this.panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
+            this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -704,6 +727,7 @@
         private System.Windows.Forms.Button btnGetOut;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button btnOpenVehiclesFile;
+        private System.Windows.Forms.Button btnImportParkingFile;
     }
 }
 

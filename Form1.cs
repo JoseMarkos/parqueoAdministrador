@@ -209,7 +209,32 @@ namespace ParqueoAdministrator
                     initDataGridViewSource();
                 }
             }
+        }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    fileRead.PathParking = filePath;
+
+                    ListaParqueos.Clear();
+                    ListaParqueos = fileRead.ReadParkingFile();
+
+                    initDataGridViewSource(ListaParqueos);
+                }
+            }
         }
     }
 }
