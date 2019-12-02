@@ -1,4 +1,5 @@
-﻿using proyectoLibrary.Modelos;
+﻿using proyectoLibrary;
+using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -160,7 +161,7 @@ namespace ParqueoAdministrator
             FileManager fileMaganer = new FileManager();
 
             fileMaganer.DeleteParkingFile(fileRead.PathVehicle);
-            fileMaganer.WriteParkingFile(fileRead.PathVehicle, listaVehiculos);
+            fileMaganer.WriteVehicleFile(listaVehiculos);
 
             if (comboVehicleType.SelectedItem != null)
             {
