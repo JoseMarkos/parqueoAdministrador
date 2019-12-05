@@ -87,9 +87,7 @@ namespace ParqueoAdministrator
 
                         char licensePlatePrefixChar = Convert.ToChar(licensePlatePrefix.ToString());
 
-                        // index 1 because of white space in the file:
-                        // propN, propN+1
-                        if (licensePlatePrefixChar != Administrator.listaVehiculos[i].LicensePlate[1])
+                        if (licensePlatePrefixChar != Administrator.listaVehiculos[i].LicensePlate[0])
                         {
                             collection[i].Visible = false;
                             counter++;
