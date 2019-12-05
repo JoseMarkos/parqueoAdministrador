@@ -14,6 +14,8 @@ namespace ParqueoAdministrator
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
         private Filter filter = new Filter();
         private FileRead fileRead = new FileRead();
+        private FileManager fileMaganer = new FileManager();
+
         private int rowId;
         private OpenFileDialog openFileDialog;
 
@@ -158,7 +160,6 @@ namespace ParqueoAdministrator
         {
             dgvVehiculos.Rows.RemoveAt(rowId);
 
-            FileManager fileMaganer = new FileManager();
 
             fileMaganer.DeleteParkingFile(fileRead.PathVehicle);
             fileMaganer.WriteVehicleFile(listaVehiculos);
@@ -240,6 +241,7 @@ namespace ParqueoAdministrator
                     filePath = openFileDialog.FileName;
 
                     fileRead.PathVehicle = filePath;
+                    fileMaganer.SetCurrentVehiclesFile(filePath);
 
                     listaVehiculos.Clear();
 
