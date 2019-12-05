@@ -97,8 +97,8 @@ namespace ParqueoAdministrator
                     case licensePlatePrefixLevel.two:
 
                         string licenPlaceFirstTwoChars
-                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString();
+                            = Administrator.listaVehiculos[i].LicensePlate[0].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[1].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstTwoChars)
                         {
@@ -110,9 +110,9 @@ namespace ParqueoAdministrator
                     case licensePlatePrefixLevel.tree:
 
                         string licenPlaceFirstThreeChars
-                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[3].ToString();
+                            = Administrator.listaVehiculos[i].LicensePlate[0].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[1].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstThreeChars)
                         {
