@@ -2,39 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static proyectoLibrary.Modelos.Vehicle;
 
 namespace ParqueoAdministrator
 {
     public sealed class Filter
     {
-        #region Enums
-
-        public enum licensePlatePrefix
-        {
-            A,
-            C,
-            CC,
-            CD,
-            DIS,
-            E,
-            EXT,
-            M,
-            MI,
-            O,
-            P,
-            TC,
-            TRC,
-            U
-        }
-
-        public enum licensePlatePrefixLevel
-        {
-            one = 1,
-            two = 2,
-            tree = 3
-        }
-
-        #endregion
         public void ByVehicleType(Vehicle.Vehicletype type, DataGridView dgv)
         {
             DataGridViewRowCollection collection = dgv.Rows;
@@ -114,9 +87,7 @@ namespace ParqueoAdministrator
 
                         char licensePlatePrefixChar = Convert.ToChar(licensePlatePrefix.ToString());
 
-                        // index 1 because of white space in the file:
-                        // propN, propN+1
-                        if (licensePlatePrefixChar != Administrator.listaVehiculos[i].LicensePlate[1])
+                        if (licensePlatePrefixChar != Administrator.listaVehiculos[i].LicensePlate[0])
                         {
                             collection[i].Visible = false;
                             counter++;
@@ -126,8 +97,8 @@ namespace ParqueoAdministrator
                     case licensePlatePrefixLevel.two:
 
                         string licenPlaceFirstTwoChars
-                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString();
+                            = Administrator.listaVehiculos[i].LicensePlate[0].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[1].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstTwoChars)
                         {
@@ -139,9 +110,9 @@ namespace ParqueoAdministrator
                     case licensePlatePrefixLevel.tree:
 
                         string licenPlaceFirstThreeChars
-                            = Administrator.listaVehiculos[i].LicensePlate[1].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString()
-                            + Administrator.listaVehiculos[i].LicensePlate[3].ToString();
+                            = Administrator.listaVehiculos[i].LicensePlate[0].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[1].ToString()
+                            + Administrator.listaVehiculos[i].LicensePlate[2].ToString();
 
                         if (licensePlatePrefixString != licenPlaceFirstThreeChars)
                         {

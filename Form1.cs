@@ -1,8 +1,10 @@
-﻿using proyectoLibrary.Modelos;
+﻿using proyectoLibrary;
+using proyectoLibrary.Modelos;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using static proyectoLibrary.Modelos.Vehicle;
 
 namespace ParqueoAdministrator
 {
@@ -12,6 +14,8 @@ namespace ParqueoAdministrator
         public static List<Vehicle> listaVehiculos = new List<Vehicle>();
         private Filter filter = new Filter();
         private FileRead fileRead = new FileRead();
+        private FileManager fileMaganer = new FileManager();
+
         private int rowId;
         private OpenFileDialog openFileDialog;
 
@@ -57,20 +61,20 @@ namespace ParqueoAdministrator
 
             // Adding options to comboTypeLicensePlate filter
 
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.A);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.C);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.CD);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.DIS);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.E);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.EXT);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.M);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.MI);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.O);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.P);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.TRC);
-            comboTypeLicensePlate.Items.Add(Filter.licensePlatePrefix.U);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.A);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.C);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.CC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.CD);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.DIS);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.E);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.EXT);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.M);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.MI);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.O);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.P);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.TC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.TRC);
+            comboTypeLicensePlate.Items.Add(licensePlatePrefix.U);
         }
 
         private void initDataGridViewSource()
@@ -156,10 +160,9 @@ namespace ParqueoAdministrator
         {
             dgvVehiculos.Rows.RemoveAt(rowId);
 
-            FileManager fileMaganer = new FileManager();
 
             fileMaganer.DeleteParkingFile(fileRead.PathVehicle);
-            fileMaganer.WriteParkingFile(fileRead.PathVehicle, listaVehiculos);
+            fileMaganer.WriteVehicleFile(listaVehiculos);
 
             if (comboVehicleType.SelectedItem != null)
             {
@@ -168,7 +171,7 @@ namespace ParqueoAdministrator
 
             if (comboTypeLicensePlate.SelectedItem != null)
             {
-                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+                filter.ByLisencePlate((licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
 
             if (txtFilterOwner.Text != "")
@@ -213,7 +216,7 @@ namespace ParqueoAdministrator
         {
             if (comboTypeLicensePlate.SelectedItem != null)
             {
-                filter.ByLisencePlate((Filter.licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
+                filter.ByLisencePlate((licensePlatePrefix)comboTypeLicensePlate.SelectedItem, dgvVehiculos);
             }
         }
 
@@ -238,6 +241,7 @@ namespace ParqueoAdministrator
                     filePath = openFileDialog.FileName;
 
                     fileRead.PathVehicle = filePath;
+                    fileMaganer.SetCurrentVehiclesFile(filePath);
 
                     listaVehiculos.Clear();
 
@@ -288,5 +292,12 @@ namespace ParqueoAdministrator
                 }
             }
         }
+
+        private void Administrator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

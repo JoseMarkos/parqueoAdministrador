@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -115,7 +116,7 @@
             this.dgvVehiculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -124,7 +125,7 @@
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
@@ -132,7 +133,8 @@
             this.dgvVehiculos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVehiculos.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvVehiculos.Location = new System.Drawing.Point(15, 15);
+            this.dgvVehiculos.Location = new System.Drawing.Point(17, 20);
+            this.dgvVehiculos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvVehiculos.MultiSelect = false;
             this.dgvVehiculos.Name = "dgvVehiculos";
             this.dgvVehiculos.ReadOnly = true;
@@ -140,14 +142,14 @@
             this.dgvVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVehiculos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVehiculos.RowHeadersVisible = false;
-            this.dgvVehiculos.Size = new System.Drawing.Size(574, 335);
+            this.dgvVehiculos.Size = new System.Drawing.Size(671, 437);
             this.dgvVehiculos.TabIndex = 0;
             this.dgvVehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehiculos_CellClick);
             // 
@@ -156,16 +158,18 @@
             this.panelData.BackColor = System.Drawing.Color.White;
             this.panelData.Controls.Add(this.dgvVehiculos);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelData.Location = new System.Drawing.Point(0, 152);
+            this.panelData.Location = new System.Drawing.Point(0, 199);
+            this.panelData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelData.Name = "panelData";
-            this.panelData.Padding = new System.Windows.Forms.Padding(15);
-            this.panelData.Size = new System.Drawing.Size(604, 365);
+            this.panelData.Padding = new System.Windows.Forms.Padding(17, 20, 17, 20);
+            this.panelData.Size = new System.Drawing.Size(705, 477);
             this.panelData.TabIndex = 1;
             // 
             // splitMain
             // 
             this.splitMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitMain.Location = new System.Drawing.Point(0, 0);
+            this.splitMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitMain.Name = "splitMain";
             // 
             // splitMain.Panel1
@@ -178,18 +182,21 @@
             // 
             this.splitMain.Panel2.Controls.Add(this.panelHead);
             this.splitMain.Panel2.Controls.Add(this.panelData);
-            this.splitMain.Size = new System.Drawing.Size(817, 517);
-            this.splitMain.SplitterDistance = 209;
+            this.splitMain.Size = new System.Drawing.Size(953, 676);
+            this.splitMain.SplitterDistance = 243;
+            this.splitMain.SplitterWidth = 5;
             this.splitMain.TabIndex = 2;
             // 
             // panelMenu
             // 
+            this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.Controls.Add(this.btnVehicle);
             this.panelMenu.Controls.Add(this.btnParqueos);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(209, 517);
+            this.panelMenu.Size = new System.Drawing.Size(243, 676);
             this.panelMenu.TabIndex = 4;
             // 
             // btnVehicle
@@ -202,11 +209,11 @@
             this.btnVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehicle.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehicle.ForeColor = System.Drawing.Color.White;
-            this.btnVehicle.Location = new System.Drawing.Point(0, 43);
-            this.btnVehicle.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnVehicle.Location = new System.Drawing.Point(0, 56);
+            this.btnVehicle.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnVehicle.Name = "btnVehicle";
-            this.btnVehicle.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehicle.Size = new System.Drawing.Size(209, 43);
+            this.btnVehicle.Padding = new System.Windows.Forms.Padding(23, 0, 23, 0);
+            this.btnVehicle.Size = new System.Drawing.Size(243, 56);
             this.btnVehicle.TabIndex = 4;
             this.btnVehicle.Text = "Vehiculos";
             this.btnVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,10 +231,10 @@
             this.btnParqueos.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParqueos.ForeColor = System.Drawing.Color.White;
             this.btnParqueos.Location = new System.Drawing.Point(0, 0);
-            this.btnParqueos.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnParqueos.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnParqueos.Name = "btnParqueos";
-            this.btnParqueos.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnParqueos.Size = new System.Drawing.Size(209, 43);
+            this.btnParqueos.Padding = new System.Windows.Forms.Padding(23, 0, 23, 0);
+            this.btnParqueos.Size = new System.Drawing.Size(243, 56);
             this.btnParqueos.TabIndex = 3;
             this.btnParqueos.Text = "Parqueos";
             this.btnParqueos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,14 +247,16 @@
             this.panelHead.Controls.Add(this.splitContainer2);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
+            this.panelHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(604, 152);
+            this.panelHead.Size = new System.Drawing.Size(705, 199);
             this.panelHead.TabIndex = 2;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -261,14 +270,16 @@
             this.splitContainer2.Panel2.Controls.Add(this.comboVehicleType);
             this.splitContainer2.Panel2.Controls.Add(this.comboTypeLicensePlate);
             this.splitContainer2.Panel2.Controls.Add(this.txtFilterOwner);
-            this.splitContainer2.Size = new System.Drawing.Size(604, 152);
-            this.splitContainer2.SplitterDistance = 103;
+            this.splitContainer2.Size = new System.Drawing.Size(705, 199);
+            this.splitContainer2.SplitterDistance = 134;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 4;
             // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -282,8 +293,9 @@
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.LightGray;
             this.splitContainer3.Panel2.Controls.Add(this.btnOpenVehiclesFile);
             this.splitContainer3.Panel2.Controls.Add(this.btnGetOut);
-            this.splitContainer3.Size = new System.Drawing.Size(604, 103);
-            this.splitContainer3.SplitterDistance = 48;
+            this.splitContainer3.Size = new System.Drawing.Size(705, 134);
+            this.splitContainer3.SplitterDistance = 62;
+            this.splitContainer3.SplitterWidth = 5;
             this.splitContainer3.TabIndex = 1;
             // 
             // labelNotification
@@ -291,7 +303,7 @@
             this.labelNotification.AutoSize = true;
             this.labelNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNotification.ForeColor = System.Drawing.Color.OliveDrab;
-            this.labelNotification.Location = new System.Drawing.Point(268, 19);
+            this.labelNotification.Location = new System.Drawing.Point(313, 25);
             this.labelNotification.Name = "labelNotification";
             this.labelNotification.Size = new System.Drawing.Size(0, 16);
             this.labelNotification.TabIndex = 1;
@@ -300,7 +312,7 @@
             // 
             this.labelVehiculos.AutoSize = true;
             this.labelVehiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVehiculos.Location = new System.Drawing.Point(14, 15);
+            this.labelVehiculos.Location = new System.Drawing.Point(16, 20);
             this.labelVehiculos.Name = "labelVehiculos";
             this.labelVehiculos.Size = new System.Drawing.Size(103, 24);
             this.labelVehiculos.TabIndex = 0;
@@ -311,12 +323,12 @@
             this.btnOpenVehiclesFile.BackColor = System.Drawing.Color.Black;
             this.btnOpenVehiclesFile.FlatAppearance.BorderSize = 0;
             this.btnOpenVehiclesFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenVehiclesFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenVehiclesFile.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenVehiclesFile.ForeColor = System.Drawing.Color.White;
-            this.btnOpenVehiclesFile.Location = new System.Drawing.Point(158, 14);
-            this.btnOpenVehiclesFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnOpenVehiclesFile.Location = new System.Drawing.Point(184, 18);
+            this.btnOpenVehiclesFile.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnOpenVehiclesFile.Name = "btnOpenVehiclesFile";
-            this.btnOpenVehiclesFile.Size = new System.Drawing.Size(98, 23);
+            this.btnOpenVehiclesFile.Size = new System.Drawing.Size(114, 30);
             this.btnOpenVehiclesFile.TabIndex = 4;
             this.btnOpenVehiclesFile.Text = "Import";
             this.btnOpenVehiclesFile.UseVisualStyleBackColor = false;
@@ -327,12 +339,12 @@
             this.btnGetOut.BackColor = System.Drawing.Color.DarkRed;
             this.btnGetOut.FlatAppearance.BorderSize = 0;
             this.btnGetOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetOut.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetOut.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetOut.ForeColor = System.Drawing.Color.White;
-            this.btnGetOut.Location = new System.Drawing.Point(15, 14);
-            this.btnGetOut.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnGetOut.Location = new System.Drawing.Point(17, 18);
+            this.btnGetOut.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnGetOut.Name = "btnGetOut";
-            this.btnGetOut.Size = new System.Drawing.Size(126, 23);
+            this.btnGetOut.Size = new System.Drawing.Size(147, 30);
             this.btnGetOut.TabIndex = 4;
             this.btnGetOut.Text = "Get out";
             this.btnGetOut.UseVisualStyleBackColor = false;
@@ -343,12 +355,12 @@
             this.btnClearFilters.BackColor = System.Drawing.Color.Black;
             this.btnClearFilters.FlatAppearance.BorderSize = 0;
             this.btnClearFilters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFilters.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFilters.ForeColor = System.Drawing.Color.White;
-            this.btnClearFilters.Location = new System.Drawing.Point(437, 10);
-            this.btnClearFilters.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnClearFilters.Location = new System.Drawing.Point(510, 13);
+            this.btnClearFilters.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnClearFilters.Name = "btnClearFilters";
-            this.btnClearFilters.Size = new System.Drawing.Size(98, 23);
+            this.btnClearFilters.Size = new System.Drawing.Size(114, 30);
             this.btnClearFilters.TabIndex = 2;
             this.btnClearFilters.Text = "Clear Filter";
             this.btnClearFilters.UseVisualStyleBackColor = false;
@@ -358,10 +370,10 @@
             // 
             this.comboVehicleType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboVehicleType.FormattingEnabled = true;
-            this.comboVehicleType.Location = new System.Drawing.Point(158, 11);
-            this.comboVehicleType.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.comboVehicleType.Location = new System.Drawing.Point(184, 14);
+            this.comboVehicleType.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.comboVehicleType.Name = "comboVehicleType";
-            this.comboVehicleType.Size = new System.Drawing.Size(121, 21);
+            this.comboVehicleType.Size = new System.Drawing.Size(140, 25);
             this.comboVehicleType.TabIndex = 1;
             this.comboVehicleType.Text = "Type";
             this.comboVehicleType.SelectedValueChanged += new System.EventHandler(this.comboVehicleType_SelectedValueChanged);
@@ -370,19 +382,20 @@
             // 
             this.comboTypeLicensePlate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTypeLicensePlate.FormattingEnabled = true;
-            this.comboTypeLicensePlate.Location = new System.Drawing.Point(296, 11);
-            this.comboTypeLicensePlate.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.comboTypeLicensePlate.Location = new System.Drawing.Point(345, 14);
+            this.comboTypeLicensePlate.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.comboTypeLicensePlate.Name = "comboTypeLicensePlate";
-            this.comboTypeLicensePlate.Size = new System.Drawing.Size(121, 21);
+            this.comboTypeLicensePlate.Size = new System.Drawing.Size(140, 25);
             this.comboTypeLicensePlate.TabIndex = 3;
             this.comboTypeLicensePlate.Text = "License Plate Type";
             this.comboTypeLicensePlate.SelectedValueChanged += new System.EventHandler(this.comboTypeLicensePlate_SelectedValueChanged);
             // 
             // txtFilterOwner
             // 
-            this.txtFilterOwner.Location = new System.Drawing.Point(15, 12);
+            this.txtFilterOwner.Location = new System.Drawing.Point(17, 16);
+            this.txtFilterOwner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFilterOwner.Name = "txtFilterOwner";
-            this.txtFilterOwner.Size = new System.Drawing.Size(126, 20);
+            this.txtFilterOwner.Size = new System.Drawing.Size(146, 23);
             this.txtFilterOwner.TabIndex = 0;
             this.txtFilterOwner.TextChanged += new System.EventHandler(this.txtFilterOwner_TextChanged);
             // 
@@ -391,8 +404,9 @@
             this.panelCreateParking.Controls.Add(this.splitContainer1);
             this.panelCreateParking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCreateParking.Location = new System.Drawing.Point(0, 0);
+            this.panelCreateParking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelCreateParking.Name = "panelCreateParking";
-            this.panelCreateParking.Size = new System.Drawing.Size(817, 517);
+            this.panelCreateParking.Size = new System.Drawing.Size(953, 676);
             this.panelCreateParking.TabIndex = 0;
             this.panelCreateParking.Visible = false;
             // 
@@ -400,14 +414,16 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.panelParkingFields);
-            this.splitContainer1.Size = new System.Drawing.Size(817, 517);
-            this.splitContainer1.SplitterDistance = 434;
+            this.splitContainer1.Size = new System.Drawing.Size(953, 676);
+            this.splitContainer1.SplitterDistance = 567;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // panelParkingFields
@@ -419,14 +435,16 @@
             this.panelParkingFields.Controls.Add(this.txtName);
             this.panelParkingFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParkingFields.Location = new System.Drawing.Point(0, 0);
+            this.panelParkingFields.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelParkingFields.Name = "panelParkingFields";
-            this.panelParkingFields.Size = new System.Drawing.Size(817, 434);
+            this.panelParkingFields.Size = new System.Drawing.Size(953, 567);
             this.panelParkingFields.TabIndex = 0;
             // 
             // radio4
             // 
             this.radio4.AutoSize = true;
-            this.radio4.Location = new System.Drawing.Point(467, 152);
+            this.radio4.Location = new System.Drawing.Point(545, 199);
+            this.radio4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio4.Name = "radio4";
             this.radio4.Size = new System.Drawing.Size(14, 13);
             this.radio4.TabIndex = 4;
@@ -436,7 +454,8 @@
             // radio2
             // 
             this.radio2.AutoSize = true;
-            this.radio2.Location = new System.Drawing.Point(467, 110);
+            this.radio2.Location = new System.Drawing.Point(545, 144);
+            this.radio2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio2.Name = "radio2";
             this.radio2.Size = new System.Drawing.Size(14, 13);
             this.radio2.TabIndex = 3;
@@ -446,7 +465,8 @@
             // radio3
             // 
             this.radio3.AutoSize = true;
-            this.radio3.Location = new System.Drawing.Point(303, 152);
+            this.radio3.Location = new System.Drawing.Point(353, 199);
+            this.radio3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio3.Name = "radio3";
             this.radio3.Size = new System.Drawing.Size(14, 13);
             this.radio3.TabIndex = 2;
@@ -456,7 +476,8 @@
             // radio1
             // 
             this.radio1.AutoSize = true;
-            this.radio1.Location = new System.Drawing.Point(303, 110);
+            this.radio1.Location = new System.Drawing.Point(353, 144);
+            this.radio1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radio1.Name = "radio1";
             this.radio1.Size = new System.Drawing.Size(14, 13);
             this.radio1.TabIndex = 1;
@@ -465,9 +486,10 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(301, 54);
+            this.txtName.Location = new System.Drawing.Point(351, 71);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(319, 20);
+            this.txtName.Size = new System.Drawing.Size(371, 23);
             this.txtName.TabIndex = 0;
             this.txtName.Tag = "Name";
             // 
@@ -475,6 +497,7 @@
             // 
             this.splitParking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitParking.Location = new System.Drawing.Point(0, 0);
+            this.splitParking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitParking.Name = "splitParking";
             // 
             // splitParking.Panel1
@@ -487,8 +510,9 @@
             // 
             this.splitParking.Panel2.Controls.Add(this.panel1);
             this.splitParking.Panel2.Controls.Add(this.panel2);
-            this.splitParking.Size = new System.Drawing.Size(817, 517);
-            this.splitParking.SplitterDistance = 209;
+            this.splitParking.Size = new System.Drawing.Size(953, 676);
+            this.splitParking.SplitterDistance = 243;
+            this.splitParking.SplitterWidth = 5;
             this.splitParking.TabIndex = 3;
             // 
             // panel4
@@ -497,8 +521,9 @@
             this.panel4.Controls.Add(this.btnParqueos2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(209, 517);
+            this.panel4.Size = new System.Drawing.Size(243, 676);
             this.panel4.TabIndex = 5;
             // 
             // btnVehiculos2
@@ -511,11 +536,11 @@
             this.btnVehiculos2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVehiculos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVehiculos2.ForeColor = System.Drawing.Color.White;
-            this.btnVehiculos2.Location = new System.Drawing.Point(0, 43);
-            this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnVehiculos2.Location = new System.Drawing.Point(0, 56);
+            this.btnVehiculos2.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnVehiculos2.Name = "btnVehiculos2";
-            this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnVehiculos2.Size = new System.Drawing.Size(209, 43);
+            this.btnVehiculos2.Padding = new System.Windows.Forms.Padding(23, 0, 23, 0);
+            this.btnVehiculos2.Size = new System.Drawing.Size(243, 56);
             this.btnVehiculos2.TabIndex = 4;
             this.btnVehiculos2.Text = "Vehiculos";
             this.btnVehiculos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -533,10 +558,10 @@
             this.btnParqueos2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParqueos2.ForeColor = System.Drawing.Color.White;
             this.btnParqueos2.Location = new System.Drawing.Point(0, 0);
-            this.btnParqueos2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnParqueos2.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnParqueos2.Name = "btnParqueos2";
-            this.btnParqueos2.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnParqueos2.Size = new System.Drawing.Size(209, 43);
+            this.btnParqueos2.Padding = new System.Windows.Forms.Padding(23, 0, 23, 0);
+            this.btnParqueos2.Size = new System.Drawing.Size(243, 56);
             this.btnParqueos2.TabIndex = 3;
             this.btnParqueos2.Text = "Parqueos";
             this.btnParqueos2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -549,14 +574,16 @@
             this.panel1.Controls.Add(this.splitContainer4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 115);
+            this.panel1.Size = new System.Drawing.Size(705, 150);
             this.panel1.TabIndex = 2;
             // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -569,8 +596,9 @@
             // 
             this.splitContainer4.Panel2.BackColor = System.Drawing.Color.LightGray;
             this.splitContainer4.Panel2.Controls.Add(this.btnImportParkingFile);
-            this.splitContainer4.Size = new System.Drawing.Size(604, 115);
-            this.splitContainer4.SplitterDistance = 55;
+            this.splitContainer4.Size = new System.Drawing.Size(705, 150);
+            this.splitContainer4.SplitterDistance = 71;
+            this.splitContainer4.SplitterWidth = 5;
             this.splitContainer4.TabIndex = 4;
             // 
             // labelNotification2
@@ -578,7 +606,7 @@
             this.labelNotification2.AutoSize = true;
             this.labelNotification2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNotification2.ForeColor = System.Drawing.Color.OliveDrab;
-            this.labelNotification2.Location = new System.Drawing.Point(251, 15);
+            this.labelNotification2.Location = new System.Drawing.Point(293, 20);
             this.labelNotification2.Name = "labelNotification2";
             this.labelNotification2.Size = new System.Drawing.Size(0, 16);
             this.labelNotification2.TabIndex = 2;
@@ -587,7 +615,7 @@
             // 
             this.labelParqueos.AutoSize = true;
             this.labelParqueos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParqueos.Location = new System.Drawing.Point(11, 9);
+            this.labelParqueos.Location = new System.Drawing.Point(13, 12);
             this.labelParqueos.Name = "labelParqueos";
             this.labelParqueos.Size = new System.Drawing.Size(99, 24);
             this.labelParqueos.TabIndex = 0;
@@ -600,10 +628,10 @@
             this.btnImportParkingFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportParkingFile.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportParkingFile.ForeColor = System.Drawing.Color.White;
-            this.btnImportParkingFile.Location = new System.Drawing.Point(15, 18);
-            this.btnImportParkingFile.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.btnImportParkingFile.Location = new System.Drawing.Point(17, 24);
+            this.btnImportParkingFile.Margin = new System.Windows.Forms.Padding(6, 4, 3, 4);
             this.btnImportParkingFile.Name = "btnImportParkingFile";
-            this.btnImportParkingFile.Size = new System.Drawing.Size(98, 23);
+            this.btnImportParkingFile.Size = new System.Drawing.Size(114, 30);
             this.btnImportParkingFile.TabIndex = 5;
             this.btnImportParkingFile.Text = "Import";
             this.btnImportParkingFile.UseVisualStyleBackColor = false;
@@ -614,10 +642,11 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.dgvParqueos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 115);
+            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(15);
-            this.panel2.Size = new System.Drawing.Size(604, 402);
+            this.panel2.Padding = new System.Windows.Forms.Padding(17, 20, 17, 20);
+            this.panel2.Size = new System.Drawing.Size(705, 526);
             this.panel2.TabIndex = 1;
             // 
             // dgvParqueos
@@ -630,7 +659,7 @@
             this.dgvParqueos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -639,7 +668,7 @@
             this.dgvParqueos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
@@ -647,7 +676,8 @@
             this.dgvParqueos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvParqueos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvParqueos.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvParqueos.Location = new System.Drawing.Point(15, 15);
+            this.dgvParqueos.Location = new System.Drawing.Point(17, 20);
+            this.dgvParqueos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvParqueos.MultiSelect = false;
             this.dgvParqueos.Name = "dgvParqueos";
             this.dgvParqueos.ReadOnly = true;
@@ -655,27 +685,30 @@
             this.dgvParqueos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvParqueos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvParqueos.RowHeadersVisible = false;
-            this.dgvParqueos.Size = new System.Drawing.Size(574, 372);
+            this.dgvParqueos.Size = new System.Drawing.Size(671, 486);
             this.dgvParqueos.TabIndex = 0;
             // 
             // Administrator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 517);
+            this.ClientSize = new System.Drawing.Size(953, 676);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.splitParking);
             this.Controls.Add(this.panelCreateParking);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Administrator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Administrator_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehiculos)).EndInit();
             this.panelData.ResumeLayout(false);
