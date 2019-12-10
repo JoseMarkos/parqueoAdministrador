@@ -16,7 +16,7 @@ namespace ParqueoAdministrator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Administrator());
         }
     }
 }

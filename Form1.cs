@@ -158,11 +158,19 @@ namespace ParqueoAdministrator
 
         private void btnGetOut_Click(object sender, EventArgs e)
         {
-            dgvVehiculos.Rows.RemoveAt(rowId);
+            foreach (var item in ListaParqueos)
+            {
+                if (item.Name == listaVehiculos[rowId].Parking)
+                {
+                    item.IncreaseFreeSpaces();
+                }
+            }
 
+            dgvVehiculos.Rows.RemoveAt(rowId);
 
             fileMaganer.DeleteParkingFile(fileRead.PathVehicle);
             fileMaganer.WriteVehicleFile(listaVehiculos);
+            fileMaganer.WriteParkingFile(ListaParqueos);
 
             if (comboVehicleType.SelectedItem != null)
             {
@@ -297,7 +305,5 @@ namespace ParqueoAdministrator
         {
             Application.Exit();
         }
-
-        
     }
 }
