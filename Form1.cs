@@ -58,6 +58,10 @@ namespace ParqueoAdministrator
             comboVehicleType.Items.Add(Vehicle.Vehicletype.SUV);
             comboVehicleType.Items.Add(Vehicle.Vehicletype.PickUp);
             comboVehicleType.Items.Add(Vehicle.Vehicletype.Camioneta);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.Bus_Urbano);
+            comboVehicleType.Items.Add(Vehicle.Vehicletype.Trailer);
+
+
 
             // Adding options to comboTypeLicensePlate filter
 
